@@ -1,0 +1,1 @@
+G:\project\c#\03_prism_serial\obj\Debug\net6.0-windows\03_prism_serial.csproj.AssemblyReference.cache

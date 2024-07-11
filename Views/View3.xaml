@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="prism_serial.Views.View3"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:prism_serial.Views"
+             xmlns:oxyWpf="http://oxyplot.org/wpf"
+       
+
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="oxyplot测试" FontSize="30" />
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="333" FontSize="30"/>
+            <ScrollViewer Grid.Column="1" HorizontalScrollBarVisibility="Visible" 
+		VerticalScrollBarVisibility="Visible" Margin="10,0,10,10">
+                <oxyWpf:PlotView Grid.Row="1"  Model="{Binding Plot}">
+                    <oxyWpf:PlotView.DefaultTrackerTemplate>
+                        <ControlTemplate>
+                            <oxyWpf:TrackerControl Position="{Binding Position}" ShowPointer="True" CornerRadius="8" BorderEdgeMode="Unspecified"  Background="White" BorderThickness="1" BorderBrush="Black" Distance="0" Margin="0" Opacity="0.8">
+                                <oxyWpf:TrackerControl.Content>
+                                    <TextBlock Text="{Binding}" Margin="7" />
+                                </oxyWpf:TrackerControl.Content>
+                            </oxyWpf:TrackerControl>
+                        </ControlTemplate>
+                    </oxyWpf:PlotView.DefaultTrackerTemplate>
+                </oxyWpf:PlotView>
+
+            </ScrollViewer>
+        </Grid>
+        
+        
+       
+        <Button Content="测试" HorizontalAlignment="Left" Margin="296,0,0,0" VerticalAlignment="Center" Command="{Binding TestCommand}"/>
+
+    </Grid>
+</UserControl>
