@@ -1527,11 +1527,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\project\\c#\\prism_serial_03\\prism_serial.csproj",
+      "projectUniqueName": "G:\\project\\c#\\prism_serial_\\prism_serial.csproj",
       "projectName": "prism_serial",
-      "projectPath": "G:\\project\\c#\\prism_serial_03\\prism_serial.csproj",
+      "projectPath": "G:\\project\\c#\\prism_serial_\\prism_serial.csproj",
       "packagesPath": "C:\\Users\\chaffer\\.nuget\\packages\\",
-      "outputPath": "G:\\project\\c#\\prism_serial_03\\obj\\",
+      "outputPath": "G:\\project\\c#\\prism_serial_\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\visual studio temp\\NuGetPackages"

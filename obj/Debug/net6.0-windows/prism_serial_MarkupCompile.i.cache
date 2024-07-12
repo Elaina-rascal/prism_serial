@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-G:\project\c#\prism_serial_03\obj\Debug\net6.0-windows\
+G:\project\c#\prism_serial_\obj\Debug\net6.0-windows\
 prism_serial
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-G:\project\c#\prism_serial_03\App.xaml
+G:\project\c#\prism_serial_\App.xaml
 4-563365263
 32101414560
 15-430648667
 2091188043433
 Views\MainWindow.xaml;Views\View1.xaml;Views\View2.xaml;Views\View3.xaml;
 
-False
+True
 

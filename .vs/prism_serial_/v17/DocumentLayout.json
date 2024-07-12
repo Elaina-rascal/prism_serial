@@ -1,110 +1,100 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "G:\\project\\c#\\prism_serial_03\\",
+  "WorkspaceRootPath": "G:\\project\\c#\\prism_serial_\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_03\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_03\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_03\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_03\\prism_serial.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:prism_serial.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_03\\views\\view2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:views\\view2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_03\\viewmodels\\view2viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_\\viewmodels\\view2viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:viewmodels\\view2viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_03\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_03\\views\\view2.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_\\views\\view2.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:views\\view2.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_03\\model\\view2model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:model\\view2model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_03\\views\\view1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:views\\view1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_03\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_03\\views\\n0[qbe@lzrh1(iph{kx$nj1.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
-      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:views\\n0[qbe@lzrh1(iph{kx$nj1.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_03\\views\\view1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_\\views\\view1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:views\\view1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_03\\views\\1.bmp||{58961B49-13E0-48C0-9258-13CBC4D40279}",
-      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:views\\1.bmp||{58961B49-13E0-48C0-9258-13CBC4D40279}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_03\\viewmodels\\view1viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:viewmodels\\view1viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_03\\viewmodels\\view3viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:viewmodels\\view3viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_03\\model\\view3model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:model\\view3model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_03\\model\\view1model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:model\\view1model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_03\\views\\view3.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:views\\view3.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_03\\common\\charpage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_\\common\\charpage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:common\\charpage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_03\\common\\echarts.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_\\model\\view2model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:model\\view2model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_\\common\\echarts.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:common\\echarts.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\chaffer\\AppData\\Local\\Temp\\.vsdbgsrc\\d85bd2ba410e7bd1feb3186a5a064dbf6b6204c3e99e491543045239f9bfe8e9\\JsonConvert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_\\views\\view1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:views\\view1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\chaffer\\AppData\\Local\\SourceServer\\99150eba87bd911b2b3e1c91ef8ef293e2c476541a4cf3cf1e44e6ba93aad076\\src\\DryIoc\\Container.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_\\viewmodels\\view1viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:viewmodels\\view1viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\8.0.302\\Sdks\\Microsoft.NET.Sdk.WindowsDesktop\\targets\\Microsoft.WinFX.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_\\model\\view1model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:model\\view1model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_\\views\\view2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:views\\view2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_\\views\\view3.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:views\\view3.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_\\views\\view3.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:views\\view3.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_\\viewmodels\\view3viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:viewmodels\\view3viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\chaffer\\AppData\\Local\\Temp\\.vsdbgsrc\\6c61f992efe090b0e3dc2069cb691497edb91b0abe79cedfba804baedef8b9f9\\XamlReader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\chaffer\\AppData\\Local\\Temp\\.vsdbgsrc\\a56157b1589e667799c64e947beebd5aaf30feca9a5862bbbfd4d9bf2cec01c5\\Application.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Visual_Studio\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_03\\common\\events\\serialmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:common\\events\\serialmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_\\model\\view3model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:model\\view3model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_03\\views\\view3.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:views\\view3.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\chaffer\\AppData\\Local\\SourceServer\\c34f70804821f718583508a02c0c4986a6930771db9ba15a15e5e5ff10e5f9be\\src\\libraries\\System.Private.CoreLib\\src\\System\\Number.Grisu3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\chaffer\\AppData\\Local\\Temp\\.vsdbgsrc\\bf4d42fb6b4501d18b3ed91dd74a53b1918d12111a6a18d81136068d9d8cfab5\\Single.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\8.0.302\\Sdks\\Microsoft.NET.Sdk.WindowsDesktop\\targets\\Microsoft.WinFX.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_\\common\\events\\serialmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:common\\events\\serialmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\chaffer\\.nuget\\packages\\scottplot.wpf\\5.0.35\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
@@ -117,17 +107,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 14,
               "Title": "MainWindowViewModel.cs",
-              "DocumentMoniker": "G:\\project\\c#\\prism_serial_03\\ViewModels\\MainWindowViewModel.cs",
+              "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\ViewModels\\MainWindowViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\MainWindowViewModel.cs",
-              "ToolTip": "G:\\project\\c#\\prism_serial_03\\ViewModels\\MainWindowViewModel.cs",
+              "ToolTip": "G:\\project\\c#\\prism_serial_\\ViewModels\\MainWindowViewModel.cs",
               "RelativeToolTip": "ViewModels\\MainWindowViewModel.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAD4AAAAIAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD4AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-17T11:00:19.426Z",
               "IsPinned": true,
@@ -135,269 +125,274 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "View2ViewModel.cs",
-              "DocumentMoniker": "G:\\project\\c#\\prism_serial_03\\ViewModels\\View2ViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\View2ViewModel.cs",
-              "ToolTip": "G:\\project\\c#\\prism_serial_03\\ViewModels\\View2ViewModel.cs",
-              "RelativeToolTip": "ViewModels\\View2ViewModel.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAIwCEAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T10:27:53.781Z"
+              "DocumentIndex": 3,
+              "Title": "charpage.html",
+              "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\Common\\charpage.html",
+              "RelativeDocumentMoniker": "Common\\charpage.html",
+              "ToolTip": "G:\\project\\c#\\prism_serial_\\Common\\charpage.html",
+              "RelativeToolTip": "Common\\charpage.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-07-12T18:05:33.557Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "View2.xaml.cs",
-              "DocumentMoniker": "G:\\project\\c#\\prism_serial_03\\Views\\View2.xaml.cs",
+              "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\Views\\View2.xaml.cs",
               "RelativeDocumentMoniker": "Views\\View2.xaml.cs",
-              "ToolTip": "G:\\project\\c#\\prism_serial_03\\Views\\View2.xaml.cs",
+              "ToolTip": "G:\\project\\c#\\prism_serial_\\Views\\View2.xaml.cs",
               "RelativeToolTip": "Views\\View2.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACcAAACDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T11:46:37.343Z"
+              "WhenOpened": "2024-07-11T05:34:23.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "View2Model.cs",
+              "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\Model\\View2Model.cs",
+              "RelativeDocumentMoniker": "Model\\View2Model.cs",
+              "ToolTip": "G:\\project\\c#\\prism_serial_\\Model\\View2Model.cs",
+              "RelativeToolTip": "Model\\View2Model.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAAAB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T05:55:42.622Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "G:\\project\\c#\\prism_serial_03\\App.xaml.cs",
-              "RelativeDocumentMoniker": "App.xaml.cs",
-              "ToolTip": "G:\\project\\c#\\prism_serial_03\\App.xaml.cs",
-              "RelativeToolTip": "App.xaml.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAuwBEAAAAiAAAA",
+              "Title": "View1.xaml.cs",
+              "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\Views\\View1.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\View1.xaml.cs",
+              "ToolTip": "G:\\project\\c#\\prism_serial_\\Views\\View1.xaml.cs",
+              "RelativeToolTip": "Views\\View1.xaml.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACEAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T11:14:26.444Z",
+              "WhenOpened": "2024-07-10T11:46:41.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "echarts.js",
+              "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\Common\\echarts.js",
+              "RelativeDocumentMoniker": "Common\\echarts.js",
+              "ToolTip": "G:\\project\\c#\\prism_serial_\\Common\\echarts.js",
+              "RelativeToolTip": "Common\\echarts.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-12T18:05:32.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "View2ViewModel.cs",
+              "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\ViewModels\\View2ViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\View2ViewModel.cs",
+              "ToolTip": "G:\\project\\c#\\prism_serial_\\ViewModels\\View2ViewModel.cs",
+              "RelativeToolTip": "ViewModels\\View2ViewModel.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAJcAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-10T10:27:53.781Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "App.xaml",
-              "DocumentMoniker": "G:\\project\\c#\\prism_serial_03\\App.xaml",
-              "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "G:\\project\\c#\\prism_serial_03\\App.xaml",
-              "RelativeToolTip": "App.xaml",
+              "Title": "View1.xaml",
+              "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\Views\\View1.xaml",
+              "RelativeDocumentMoniker": "Views\\View1.xaml",
+              "ToolTip": "G:\\project\\c#\\prism_serial_\\Views\\View1.xaml",
+              "RelativeToolTip": "Views\\View1.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-10T16:05:18.703Z"
+              "WhenOpened": "2024-07-11T07:07:15.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "View1ViewModel.cs",
+              "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\ViewModels\\View1ViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\View1ViewModel.cs",
+              "ToolTip": "G:\\project\\c#\\prism_serial_\\ViewModels\\View1ViewModel.cs",
+              "RelativeToolTip": "ViewModels\\View1ViewModel.cs",
+              "ViewState": "AQIAAIAAAAAAAAAAAAAAAC4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T06:07:24.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "View1Model.cs",
+              "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\Model\\View1Model.cs",
+              "RelativeDocumentMoniker": "Model\\View1Model.cs",
+              "ToolTip": "G:\\project\\c#\\prism_serial_\\Model\\View1Model.cs",
+              "RelativeToolTip": "Model\\View1Model.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-12T17:04:22.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\Views\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Views\\MainWindow.xaml",
+              "ToolTip": "G:\\project\\c#\\prism_serial_\\Views\\MainWindow.xaml",
+              "RelativeToolTip": "Views\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-17T10:50:13.982Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "G:\\project\\c#\\prism_serial_03\\Views\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "Views\\MainWindow.xaml",
-              "ToolTip": "G:\\project\\c#\\prism_serial_03\\Views\\MainWindow.xaml",
-              "RelativeToolTip": "Views\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-17T10:50:13.982Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "prism_serial.csproj",
-              "DocumentMoniker": "G:\\project\\c#\\prism_serial_03\\prism_serial.csproj",
-              "RelativeDocumentMoniker": "prism_serial.csproj",
-              "ToolTip": "G:\\project\\c#\\prism_serial_03\\prism_serial.csproj",
-              "RelativeToolTip": "prism_serial.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-06-17T15:19:37.167Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "G:\\project\\c#\\prism_serial_03\\Views\\MainWindow.xaml.cs",
+              "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\Views\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Views\\MainWindow.xaml.cs",
-              "ToolTip": "G:\\project\\c#\\prism_serial_03\\Views\\MainWindow.xaml.cs",
+              "ToolTip": "G:\\project\\c#\\prism_serial_\\Views\\MainWindow.xaml.cs",
               "RelativeToolTip": "Views\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAfAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-10T11:46:11.814Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "View2.xaml",
-              "DocumentMoniker": "G:\\project\\c#\\prism_serial_03\\Views\\View2.xaml",
+              "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\Views\\View2.xaml",
               "RelativeDocumentMoniker": "Views\\View2.xaml",
-              "ToolTip": "G:\\project\\c#\\prism_serial_03\\Views\\View2.xaml",
+              "ToolTip": "G:\\project\\c#\\prism_serial_\\Views\\View2.xaml",
               "RelativeToolTip": "Views\\View2.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-10T10:28:23.275Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "View2Model.cs",
-              "DocumentMoniker": "G:\\project\\c#\\prism_serial_03\\Model\\View2Model.cs",
-              "RelativeDocumentMoniker": "Model\\View2Model.cs",
-              "ToolTip": "G:\\project\\c#\\prism_serial_03\\Model\\View2Model.cs",
-              "RelativeToolTip": "Model\\View2Model.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAiwBkAAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T10:28:18.453Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "View1.xaml",
-              "DocumentMoniker": "G:\\project\\c#\\prism_serial_03\\Views\\View1.xaml",
-              "RelativeDocumentMoniker": "Views\\View1.xaml",
-              "ToolTip": "G:\\project\\c#\\prism_serial_03\\Views\\View1.xaml",
-              "RelativeToolTip": "Views\\View1.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-17T10:50:40.642Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "N0[QBE@LZRH1(IPH{KX$NJ1.png",
-              "DocumentMoniker": "G:\\project\\c#\\prism_serial_03\\Views\\N0[QBE@LZRH1(IPH{KX$NJ1.png",
-              "RelativeDocumentMoniker": "Views\\N0[QBE@LZRH1(IPH{KX$NJ1.png",
-              "ToolTip": "G:\\project\\c#\\prism_serial_03\\Views\\N0[QBE@LZRH1(IPH{KX$NJ1.png",
-              "RelativeToolTip": "Views\\N0[QBE@LZRH1(IPH{KX$NJ1.png",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2024-07-10T11:54:05.283Z"
+              "WhenOpened": "2024-07-11T05:31:14.514Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "View1.xaml.cs",
-              "DocumentMoniker": "G:\\project\\c#\\prism_serial_03\\Views\\View1.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\View1.xaml.cs",
-              "ToolTip": "G:\\project\\c#\\prism_serial_03\\Views\\View1.xaml.cs",
-              "RelativeToolTip": "Views\\View1.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T11:46:41.782Z"
+              "Title": "View3.xaml",
+              "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\Views\\View3.xaml",
+              "RelativeDocumentMoniker": "Views\\View3.xaml",
+              "ToolTip": "G:\\project\\c#\\prism_serial_\\Views\\View3.xaml",
+              "RelativeToolTip": "Views\\View3.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-12T17:43:06.445Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "1.bmp",
-              "DocumentMoniker": "G:\\project\\c#\\prism_serial_03\\Views\\1.bmp",
-              "RelativeDocumentMoniker": "Views\\1.bmp",
-              "ToolTip": "G:\\project\\c#\\prism_serial_03\\Views\\1.bmp",
-              "RelativeToolTip": "Views\\1.bmp",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2024-07-10T11:46:13.542Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "View1ViewModel.cs",
-              "DocumentMoniker": "G:\\project\\c#\\prism_serial_03\\ViewModels\\View1ViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\View1ViewModel.cs",
-              "ToolTip": "G:\\project\\c#\\prism_serial_03\\ViewModels\\View1ViewModel.cs",
-              "RelativeToolTip": "ViewModels\\View1ViewModel.cs",
-              "ViewState": "AQIAAF8AAAAAAAAAAAAAAHQAAAAiAAAA",
+              "Title": "View3.xaml.cs",
+              "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\Views\\View3.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\View3.xaml.cs",
+              "ToolTip": "G:\\project\\c#\\prism_serial_\\Views\\View3.xaml.cs",
+              "RelativeToolTip": "Views\\View3.xaml.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABsAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T09:27:17.491Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "View3Model.cs",
-              "DocumentMoniker": "G:\\project\\c#\\prism_serial_03\\Model\\View3Model.cs",
-              "RelativeDocumentMoniker": "Model\\View3Model.cs",
-              "ToolTip": "G:\\project\\c#\\prism_serial_03\\Model\\View3Model.cs",
-              "RelativeToolTip": "Model\\View3Model.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAkwBMAAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T10:49:03.426Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "View1Model.cs",
-              "DocumentMoniker": "G:\\project\\c#\\prism_serial_03\\Model\\View1Model.cs",
-              "RelativeDocumentMoniker": "Model\\View1Model.cs",
-              "ToolTip": "G:\\project\\c#\\prism_serial_03\\Model\\View1Model.cs",
-              "RelativeToolTip": "Model\\View1Model.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAACIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T11:07:51.789Z"
+              "WhenOpened": "2024-06-17T10:49:41.036Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
               "Title": "View3ViewModel.cs",
-              "DocumentMoniker": "G:\\project\\c#\\prism_serial_03\\ViewModels\\View3ViewModel.cs",
+              "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\ViewModels\\View3ViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\View3ViewModel.cs",
-              "ToolTip": "G:\\project\\c#\\prism_serial_03\\ViewModels\\View3ViewModel.cs",
+              "ToolTip": "G:\\project\\c#\\prism_serial_\\ViewModels\\View3ViewModel.cs",
               "RelativeToolTip": "ViewModels\\View3ViewModel.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T11:12:54.608Z"
+              "WhenOpened": "2024-07-12T17:43:07.833Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "View3.xaml",
-              "DocumentMoniker": "G:\\project\\c#\\prism_serial_03\\Views\\View3.xaml",
-              "RelativeDocumentMoniker": "Views\\View3.xaml",
-              "ToolTip": "G:\\project\\c#\\prism_serial_03\\Views\\View3.xaml",
-              "RelativeToolTip": "Views\\View3.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-10T11:40:55.696Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "charpage.html",
-              "DocumentMoniker": "G:\\project\\c#\\prism_serial_03\\Common\\charpage.html",
-              "RelativeDocumentMoniker": "Common\\charpage.html",
-              "ToolTip": "G:\\project\\c#\\prism_serial_03\\Common\\charpage.html",
-              "RelativeToolTip": "Common\\charpage.html",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAAAAkAAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-06-17T16:03:37.025Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "echarts.js",
-              "DocumentMoniker": "G:\\project\\c#\\prism_serial_03\\Common\\echarts.js",
-              "RelativeDocumentMoniker": "Common\\echarts.js",
-              "ToolTip": "G:\\project\\c#\\prism_serial_03\\Common\\echarts.js",
-              "RelativeToolTip": "Common\\echarts.js",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-07-10T10:56:38.421Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Container.cs",
-              "DocumentMoniker": "C:\\Users\\chaffer\\AppData\\Local\\SourceServer\\99150eba87bd911b2b3e1c91ef8ef293e2c476541a4cf3cf1e44e6ba93aad076\\src\\DryIoc\\Container.cs",
-              "ToolTip": "C:\\Users\\chaffer\\AppData\\Local\\SourceServer\\99150eba87bd911b2b3e1c91ef8ef293e2c476541a4cf3cf1e44e6ba93aad076\\src\\DryIoc\\Container.cs",
-              "ViewState": "AQIAADALAAAAAAAAAAAvwDMLAAAQAAAA",
+              "DocumentIndex": 16,
+              "Title": "XamlReader.cs",
+              "DocumentMoniker": "C:\\Users\\chaffer\\AppData\\Local\\Temp\\.vsdbgsrc\\6c61f992efe090b0e3dc2069cb691497edb91b0abe79cedfba804baedef8b9f9\\XamlReader.cs",
+              "ToolTip": "C:\\Users\\chaffer\\AppData\\Local\\Temp\\.vsdbgsrc\\6c61f992efe090b0e3dc2069cb691497edb91b0abe79cedfba804baedef8b9f9\\XamlReader.cs [\u53EA\u8BFB]",
+              "ViewState": "AQIAAFoBAAAAAAAAAAAhwGMBAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T09:01:41.546Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "JsonConvert.cs",
-              "DocumentMoniker": "C:\\Users\\chaffer\\AppData\\Local\\Temp\\.vsdbgsrc\\d85bd2ba410e7bd1feb3186a5a064dbf6b6204c3e99e491543045239f9bfe8e9\\JsonConvert.cs",
-              "ToolTip": "C:\\Users\\chaffer\\AppData\\Local\\Temp\\.vsdbgsrc\\d85bd2ba410e7bd1feb3186a5a064dbf6b6204c3e99e491543045239f9bfe8e9\\JsonConvert.cs [\u53EA\u8BFB]",
-              "ViewState": "AQIAAEUBAAAAAAAAAAAvwFIBAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T09:35:45.495Z",
+              "WhenOpened": "2024-07-12T17:33:03.575Z",
               "EditorCaption": " [\u53EA\u8BFB]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 17,
+              "Title": "Application.cs",
+              "DocumentMoniker": "C:\\Users\\chaffer\\AppData\\Local\\Temp\\.vsdbgsrc\\a56157b1589e667799c64e947beebd5aaf30feca9a5862bbbfd4d9bf2cec01c5\\Application.cs",
+              "ToolTip": "C:\\Users\\chaffer\\AppData\\Local\\Temp\\.vsdbgsrc\\a56157b1589e667799c64e947beebd5aaf30feca9a5862bbbfd4d9bf2cec01c5\\Application.cs [\u53EA\u8BFB]",
+              "ViewState": "AQIAAHEFAAAAAAAAAAAvwIAFAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-12T17:09:10.18Z",
+              "EditorCaption": " [\u53EA\u8BFB]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "D:\\Visual_Studio\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "ToolTip": "D:\\Visual_Studio\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ViewState": "AQIAALQAAAAAAAAAAAAxwIgBAAAJAAAA",
+              "ViewState": "AQIAAIYUAAAAAAAAAAAqwJUUAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2024-06-17T15:17:57.382Z"
+              "WhenOpened": "2024-06-17T15:17:57.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "View3Model.cs",
+              "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\Model\\View3Model.cs",
+              "RelativeDocumentMoniker": "Model\\View3Model.cs",
+              "ToolTip": "G:\\project\\c#\\prism_serial_\\Model\\View3Model.cs",
+              "RelativeToolTip": "Model\\View3Model.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T06:42:51.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Number.Grisu3.cs",
+              "DocumentMoniker": "C:\\Users\\chaffer\\AppData\\Local\\SourceServer\\c34f70804821f718583508a02c0c4986a6930771db9ba15a15e5e5ff10e5f9be\\src\\libraries\\System.Private.CoreLib\\src\\System\\Number.Grisu3.cs",
+              "ToolTip": "C:\\Users\\chaffer\\AppData\\Local\\SourceServer\\c34f70804821f718583508a02c0c4986a6930771db9ba15a15e5e5ff10e5f9be\\src\\libraries\\System.Private.CoreLib\\src\\System\\Number.Grisu3.cs",
+              "ViewState": "AQIAAOoBAAAAAAAAAIAwwCACAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T05:53:00.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Single.cs",
+              "DocumentMoniker": "C:\\Users\\chaffer\\AppData\\Local\\Temp\\.vsdbgsrc\\bf4d42fb6b4501d18b3ed91dd74a53b1918d12111a6a18d81136068d9d8cfab5\\Single.cs",
+              "ToolTip": "C:\\Users\\chaffer\\AppData\\Local\\Temp\\.vsdbgsrc\\bf4d42fb6b4501d18b3ed91dd74a53b1918d12111a6a18d81136068d9d8cfab5\\Single.cs",
+              "ViewState": "AQIAAA8BAAAAAAAAAIAwwB4BAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T05:44:07.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "G:\\project\\c#\\prism_serial_\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAuwBEAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-10T11:14:26.444Z"
             },
             {
               "$type": "Document",
@@ -411,11 +406,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 24,
               "Title": "SerialMessage.cs",
-              "DocumentMoniker": "G:\\project\\c#\\prism_serial_03\\Common\\Events\\SerialMessage.cs",
+              "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\Common\\Events\\SerialMessage.cs",
               "RelativeDocumentMoniker": "Common\\Events\\SerialMessage.cs",
-              "ToolTip": "G:\\project\\c#\\prism_serial_03\\Common\\Events\\SerialMessage.cs",
+              "ToolTip": "G:\\project\\c#\\prism_serial_\\Common\\Events\\SerialMessage.cs",
               "RelativeToolTip": "Common\\Events\\SerialMessage.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -423,19 +418,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "View3.xaml.cs",
-              "DocumentMoniker": "G:\\project\\c#\\prism_serial_03\\Views\\View3.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\View3.xaml.cs",
-              "ToolTip": "G:\\project\\c#\\prism_serial_03\\Views\\View3.xaml.cs",
-              "RelativeToolTip": "Views\\View3.xaml.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAEBVwBoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T10:49:41.036Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 25,
               "Title": "readme.md",
               "DocumentMoniker": "C:\\Users\\chaffer\\.nuget\\packages\\scottplot.wpf\\5.0.35\\readme.md",
               "ToolTip": "C:\\Users\\chaffer\\.nuget\\packages\\scottplot.wpf\\5.0.35\\readme.md",

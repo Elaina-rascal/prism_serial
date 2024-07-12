@@ -28,12 +28,28 @@ namespace prism_simpletemplate.Views
             InitializeComponent();
             web.Source = new Uri(System.IO.Directory.GetCurrentDirectory() + "\\Common\\charpage.html");
             web.NavigationCompleted += Web_NavigationCompleted;
+
+            text1.KeyDown += Keyenterdown;
+            text2.KeyDown += Keyenterdown;
+            text3.KeyDown += Keyenterdown;
             //view2ViewModel.postDelegate = new View2ViewModel.PostDelegate(web.CoreWebView2.PostWebMessageAsJson);
         }
         View2ViewModel view2ViewModel;
+        
+       
         private void Web_NavigationCompleted(object sender, Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs e)
         {
             view2ViewModel.postDelegate = new View2ViewModel.PostDelegate(web.CoreWebView2.PostWebMessageAsJson);
+        }
+        void Keyenterdown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                var textbox = sender as System.Windows.Controls.TextBox;
+                textbox.MoveFocus(new TraversalRequest(FocusNavigationDirection.Next));
+                //MessageBox.Show("Enter key is pressed");
+
+            }
         }
     }
 }

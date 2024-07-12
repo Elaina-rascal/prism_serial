@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oTroZ0eALu0=",
+  "dgSpecHash": "XjEakjfvJrs=",
   "success": true,
-  "projectFilePath": "G:\\project\\c#\\prism_serial_03\\prism_serial.csproj",
+  "projectFilePath": "G:\\project\\c#\\prism_serial_\\prism_serial.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\chaffer\\.nuget\\packages\\dryioc.dll\\4.7.7\\dryioc.dll.4.7.7.nupkg.sha512",
     "C:\\Users\\chaffer\\.nuget\\packages\\materialdesigncolors\\3.1.0-ci651\\materialdesigncolors.3.1.0-ci651.nupkg.sha512",

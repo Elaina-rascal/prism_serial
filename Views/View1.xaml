@@ -51,6 +51,7 @@
             </Button.Background>
         </Button>
         <Button Content="发送" Command="{Binding TransButtonClickCommand}" Style="{StaticResource MaterialDesignFlatLightButton}" FontSize="10" HorizontalAlignment="Left" Margin="675,296,0,0" Grid.Row="2" VerticalAlignment="Top" Height="24" Opacity="0.5" Width="55" Background="#FFC8C6C6"/>
+        <ComboBox Grid.Column="1" HorizontalAlignment="Left" Margin="171,23,0,0" Grid.Row="2" VerticalAlignment="Top" Width="256"/>
 
     </Grid>
 </UserControl>
