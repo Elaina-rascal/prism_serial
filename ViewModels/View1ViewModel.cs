@@ -1,21 +1,18 @@
 ﻿using Prism.Commands;
 using Prism.Events;
 using Prism.Mvvm;
-using prism_serial.Common.Events;
-using prism_simpletemplate.Model;
+using prism_serial.Model;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO.Ports;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows.Threading;
 
-namespace prism_simpletemplate.ViewModels
+namespace prism_serial.ViewModels
 {
     /// <summary>
     /// Represents the ViewModel for View1.
@@ -29,41 +26,42 @@ namespace prism_simpletemplate.ViewModels
         /// <param name="serialPortin">The serial port.</param>
         public View1ViewModel(IEventAggregator eventAggregator, SerialPort serialPortin)
         {
-            this.serialPort = serialPortin;
-            this.eventAggregator = eventAggregator;
+            this._serialPort = serialPortin;
+            this._eventAggregator = eventAggregator;
 
-            serialPort.Encoding = Encoding.UTF8;
-            serialPort.DataReceived += SerialDataReceived;
+            _serialPort.Encoding = Encoding.UTF8;
+            _serialPort.DataReceived += SerialDataReceived;
             ButtonCommand = new DelegateCommand<object>(obj => SearchAvailableCom());
-            ClearCommand = new DelegateCommand<object>(obj => Received_text = "");
+            ClearCommand = new DelegateCommand<object>(obj => ReceivedText = "");
             OpenCloseCommand = new DelegateCommand<object>(OnOpenCloseCommand);
-            Trans_ClearCommand = new DelegateCommand<object>(obj => Trans_text = "");
-            TransButtonClickCommand = new DelegateCommand<object>(obj => TransData(DataTransThread));
+            TransClearCommand = new DelegateCommand<object>(obj => TransText = "");
+            TransButtonClickCommand = new DelegateCommand<object>(obj => TransData(_dataTransThread));
 
-            timer.Interval = new TimeSpan(0, 0, 1);
-            timer.Tick += (s, e) => { SearchAvailableCom(); };
-            timer.IsEnabled = true;
+            _timer.Interval = new TimeSpan(0, 0, 1);
+            _timer.Tick += (s, e) => { SearchAvailableCom(); };
+            _timer.IsEnabled = true;
         }
 
         // Resources
-        private SerialPort serialPort;
-        private DispatcherTimer timer = new DispatcherTimer();
-        private DispatcherTimer timer2 = new DispatcherTimer();
-        private readonly IEventAggregator eventAggregator;
-        private View1Model obj = new View1Model();
-        private Thread DataTransThread;
+        private SerialPort _serialPort;
+
+        private DispatcherTimer _timer = new DispatcherTimer();
+        private DispatcherTimer _timer2 = new DispatcherTimer();
+        private readonly IEventAggregator _eventAggregator;
+        private View1Model _obj = new View1Model();
+        private Thread _dataTransThread;
 
         // Bindable properties
         /// <summary>
         /// Gets or sets the received text.
         /// </summary>
-        public string Received_text
+        public string ReceivedText
         {
-            get { return (string)obj.Received_text; }
+            get => (string)_obj.ReceivedText;
             set
             {
-                obj.Received_text = value;
-                show_text = Received_text;
+                _obj.ReceivedText = value;
+                ShowText = ReceivedText;
                 RaisePropertyChanged();
             }
         }
@@ -71,23 +69,23 @@ namespace prism_simpletemplate.ViewModels
         /// <summary>
         /// Gets or sets the text to be transmitted.
         /// </summary>
-        public string Trans_text
+        public string TransText
         {
-            get { return obj.Trans_text; }
-            set { obj.Trans_text = value; RaisePropertyChanged(); }
+            get => _obj.TransText;
+            set { _obj.TransText = value; RaisePropertyChanged(); }
         }
 
         /// <summary>
         /// Gets or sets the text to be displayed.
         /// </summary>
-        public string show_text
+        public string ShowText
         {
-            get { return obj.show_text; }
+            get => _obj.ShowText;
             set
             {
-                if (obj.show_text != value)
+                if (_obj.ShowText != value)
                 {
-                    obj.show_text = value.Replace(@"\n", Environment.NewLine);
+                    _obj.ShowText = value.Replace(@"\n", Environment.NewLine);
                 }
                 RaisePropertyChanged();
             }
@@ -96,37 +94,37 @@ namespace prism_simpletemplate.ViewModels
         /// <summary>
         /// Gets or sets the baud rates.
         /// </summary>
-        public List<int> baudrate
+        public List<int> Baudrate
         {
-            get { return (List<int>)obj.baudrate; }
-            set { obj.baudrate = value; RaisePropertyChanged(); }
+            get => (List<int>)_obj.Baudrate;
+            set { _obj.Baudrate = value; RaisePropertyChanged(); }
         }
 
         /// <summary>
         /// Gets or sets the available COM ports.
         /// </summary>
-        public ObservableCollection<string> com
+        public ObservableCollection<string> Com
         {
-            get { return obj.com; }
-            set { obj.com = value; RaisePropertyChanged(); }
+            get => _obj.Com;
+            set { _obj.Com = value; RaisePropertyChanged(); }
         }
 
         /// <summary>
         /// Gets or sets the selected baud rate.
         /// </summary>
-        public int baudrate_select
+        public int BaudrateSelect
         {
-            get { return (int)obj.baudrate_select; }
-            set { obj.baudrate_select = value; RaisePropertyChanged(); }
+            get => (int)_obj.BaudrateSelect;
+            set { _obj.BaudrateSelect = value; RaisePropertyChanged(); }
         }
 
         /// <summary>
         /// Gets or sets the selected COM port.
         /// </summary>
-        public string com_select
+        public string ComSelect
         {
-            get { return obj.com_select; }
-            set { obj.com_select = value; RaisePropertyChanged(); }
+            get => _obj.ComSelect;
+            set { _obj.ComSelect = value; RaisePropertyChanged(); }
         }
 
         /// <summary>
@@ -134,8 +132,8 @@ namespace prism_simpletemplate.ViewModels
         /// </summary>
         public bool IsComBaudEnable
         {
-            get { return obj.IsComBaudEnable; }
-            set { obj.IsComBaudEnable = value; RaisePropertyChanged(); }
+            get => _obj.IsComBaudEnable;
+            set { _obj.IsComBaudEnable = value; RaisePropertyChanged(); }
         }
 
         // Bindable commands
@@ -152,7 +150,7 @@ namespace prism_simpletemplate.ViewModels
         /// <summary>
         /// Gets or sets the command for clearing the transmitted text.
         /// </summary>
-        public DelegateCommand<object> Trans_ClearCommand { get; set; }
+        public DelegateCommand<object> TransClearCommand { get; set; }
 
         /// <summary>
         /// Gets or sets the command for opening or closing the serial port.
@@ -169,12 +167,11 @@ namespace prism_simpletemplate.ViewModels
         {
             try
             {
-                string received_text = serialPort.ReadExisting();
-                Received_text = Received_text + received_text;
+                string receivedText = _serialPort.ReadExisting();
+                ReceivedText = ReceivedText + receivedText;
             }
             catch
             {
-
             }
         }
 
@@ -183,42 +180,48 @@ namespace prism_simpletemplate.ViewModels
         {
             try
             {
-                string temp_string;
-                com.Clear();
+                Com.Clear();
                 for (int i = 0; i < 100; i++)
                 {
                     try
                     {
-                        temp_string = "COM" + i.ToString();
-                        mySerial.PortName = temp_string;
+                        var tempString = "COM" + i.ToString();
+                        mySerial.PortName = tempString;
                         mySerial.Open();
-                        com.Add(temp_string);
+                        Com.Add(tempString);
                         mySerial.Close();
                     }
-                    catch { };
+                    catch
+                    {
+                        // ignored
+                    }
+
+                    ;
                 }
             }
             catch
-            { }
+            {
+                // ignored
+            }
         }
 
         private void SearchAvailableCom()
         {
-            string selectedPort = com_select;
+            string selectedPort = ComSelect;
             string[] ports = SerialPort.GetPortNames();
-            bool shouldUpdate = !com.SequenceEqual(ports);
+            bool shouldUpdate = !Com.SequenceEqual(ports);
 
             if (shouldUpdate)
             {
-                com.Clear();
+                Com.Clear();
                 foreach (string port in ports)
                 {
-                    com.Add(port);
+                    Com.Add(port);
                 }
 
                 if (ports.Contains(selectedPort))
                 {
-                    com_select = selectedPort;
+                    ComSelect = selectedPort;
                 }
             }
         }
@@ -240,9 +243,9 @@ namespace prism_simpletemplate.ViewModels
             {
                 try
                 {
-                    serialPort.PortName = com_select;
-                    serialPort.BaudRate = baudrate_select;
-                    serialPort.Open();
+                    _serialPort.PortName = ComSelect;
+                    _serialPort.BaudRate = BaudrateSelect;
+                    _serialPort.Open();
                     button.Content = "关闭串口";
                     IsComBaudEnable = false;
                 }
@@ -255,7 +258,7 @@ namespace prism_simpletemplate.ViewModels
             {
                 try
                 {
-                    serialPort.Close();
+                    _serialPort.Close();
                     button.Content = "打开串口";
                     IsComBaudEnable = true;
                 }
@@ -273,7 +276,7 @@ namespace prism_simpletemplate.ViewModels
             {
                 try
                 {
-                    serialPort.Write(Trans_text);
+                    _serialPort.Write(TransText);
                 }
                 catch (Exception ex)
                 {
@@ -282,7 +285,6 @@ namespace prism_simpletemplate.ViewModels
             }
             else if (e.Key == Key.Enter && (Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control)
             {
-
             }
         }
 
@@ -292,8 +294,8 @@ namespace prism_simpletemplate.ViewModels
             {
                 try
                 {
-                    serialPort.WriteTimeout = 2000;
-                    serialPort.Write(Trans_text);
+                    _serialPort.WriteTimeout = 2000;
+                    _serialPort.Write(TransText);
                 }
                 catch (Exception ex)
                 {
@@ -311,7 +313,7 @@ namespace prism_simpletemplate.ViewModels
             if (e.Key == Key.Enter && (Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control)
             {
                 int caretIndex = textBox.CaretIndex;
-                Trans_text = textBox.Text;
+                TransText = textBox.Text;
                 int insertionPoint = caretIndex;
                 textBox.Text = textBox.Text.Insert(insertionPoint, "\r\n");
                 textBox.CaretIndex = insertionPoint + 2;
@@ -319,8 +321,8 @@ namespace prism_simpletemplate.ViewModels
             }
             else if (e.Key == Key.Enter)
             {
-                Trans_text = textBox.Text;
-                TransData(DataTransThread);
+                TransText = textBox.Text;
+                TransData(_dataTransThread);
             }
         }
 
@@ -331,9 +333,9 @@ namespace prism_simpletemplate.ViewModels
             {
                 try
                 {
-                    serialPort.PortName = com_select;
-                    serialPort.BaudRate = baudrate_select;
-                    serialPort.Open();
+                    _serialPort.PortName = ComSelect;
+                    _serialPort.BaudRate = BaudrateSelect;
+                    _serialPort.Open();
                     button.Content = "关闭串口";
                     IsComBaudEnable = false;
                 }
@@ -346,7 +348,7 @@ namespace prism_simpletemplate.ViewModels
             {
                 try
                 {
-                    serialPort.Close();
+                    _serialPort.Close();
                     button.Content = "打开串口";
                     IsComBaudEnable = true;
                 }

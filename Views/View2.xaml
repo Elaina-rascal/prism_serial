@@ -1,51 +1,49 @@
 ﻿<UserControl
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:prism_simpletemplate.Views"
-             
-            xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+
+             xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
             xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
 
-             xmlns:Wpf="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf" x:Class="prism_simpletemplate.Views.View2"
+             xmlns:Wpf="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf" x:Class="prism_serial.Views.View2"
 
              mc:Ignorable="d" Width="1280" Height="686">
     <Grid Width="1280" Height="686" Cursor="">
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition/>
+            <RowDefinition Height="auto" />
+            <RowDefinition />
         </Grid.RowDefinitions>
         <Grid Grid.Row="1" Width="auto" Height="auto">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Wpf:WebView2 Grid.Row="1" x:Name="web" Grid.Column="1"/>
+            <Wpf:WebView2 Grid.Row="1" x:Name="web" Grid.Column="1" />
             <DockPanel Grid.Column="0">
-                <Label Content="模式" DockPanel.Dock="Top" FontSize="15" Margin="20 "/>
-                <ComboBox DockPanel.Dock="Top" ItemsSource="{Binding text_list_control}" Text="{Binding text_list_selected}" Margin="20,0,20,20" />
+                <Label Content="模式" DockPanel.Dock="Top" FontSize="15" Margin="20 " />
+                <ComboBox DockPanel.Dock="Top" ItemsSource="{Binding TextListControl}" Text="{Binding TextListSelected}" Margin="20,0,20,20" />
                 <StackPanel DockPanel.Dock="Top" Margin="20,20,5,20" Orientation="Horizontal">
-                    <TextBox x:Name="text1" Width="40" Margin="0,10,0,10" Text="{Binding control_first_text}"/>
-                    <Slider Width="120" DockPanel.Dock="Top" Style="{StaticResource MaterialDesign3.MaterialDesignSlider}" Minimum="-1" Maximum="1" Value="{Binding control_first}" Margin="10,10,10,10"/>
+                    <TextBox x:Name="text1" Width="40" Margin="0,10,0,10" Text="{Binding ControlFirstText}" />
+                    <Slider Width="120" DockPanel.Dock="Top" Style="{StaticResource MaterialDesign3.MaterialDesignSlider}" Minimum="-1" Maximum="1" Value="{Binding ControlFirst}" Margin="10,10,10,10" />
                 </StackPanel>
 
                 <StackPanel DockPanel.Dock="Top" Margin="20,20,5,20" Orientation="Horizontal">
-                    <TextBox x:Name="text2" Width="40" Margin="0,10,0,10" Text="{Binding control_second_text}"/>
-                    <Slider  Width="120" DockPanel.Dock="Top" Minimum="-1" Maximum="1" Value="{Binding control_second,UpdateSourceTrigger=PropertyChanged}" Margin="10,10,10,10" Style="{StaticResource MaterialDesign3.MaterialDesignSlider}"/>
+                    <TextBox x:Name="text2" Width="40" Margin="0,10,0,10" Text="{Binding ControlSecondText}" />
+                    <Slider  Width="120" DockPanel.Dock="Top" Minimum="-1" Maximum="1" Value="{Binding ControlSecond,UpdateSourceTrigger=PropertyChanged}" Margin="10,10,10,10" Style="{StaticResource MaterialDesign3.MaterialDesignSlider}" />
                 </StackPanel>
                 <StackPanel DockPanel.Dock="Top" Margin="20,20,5,20" Orientation="Horizontal">
-                    <TextBox x:Name="text3" Width="40" Margin="0,10,0,10" Text="{Binding control_third_text}"/>
-                    <Slider Width="120" DockPanel.Dock="Top" Minimum="-1" Maximum="1" Value="{Binding control_third}" Margin="10,10,10,10" Style="{StaticResource MaterialDesign3.MaterialDesignSlider}"/>
+                    <TextBox x:Name="text3" Width="40" Margin="0,10,0,10" Text="{Binding ControlThirdText}" />
+                    <Slider Width="120" DockPanel.Dock="Top" Minimum="-1" Maximum="1" Value="{Binding ControlThird}" Margin="10,10,10,10" Style="{StaticResource MaterialDesign3.MaterialDesignSlider}" />
                 </StackPanel>
-                <Button Content="发指令" Margin="20,0,20,0" DockPanel.Dock="Top" Command="{Binding CarCommand}"/>
-                <Button Content="停止" Margin="20,20,20,0" DockPanel.Dock="Top" Command="{Binding CarStopCommand}"/>
-                <Button Content="清零" DockPanel.Dock="Top" Margin="20,0,20,0" Command="{Binding ClearCommand}"/>
+                <Button Content="发指令" Margin="20,0,20,0" DockPanel.Dock="Top" Command="{Binding CarCommand}" />
+                <Button Content="停止" Margin="20,20,20,0" DockPanel.Dock="Top" Command="{Binding CarStopCommand}" />
+                <Button Content="清零" DockPanel.Dock="Top" Margin="20,0,20,0" Command="{Binding ClearCommand}" />
             </DockPanel>
         </Grid>
-        <TextBox Text="Echarts测试" FontSize="30"/>
-        <Button Content="测试" HorizontalAlignment="Left" Margin="296,0,0,0" VerticalAlignment="Center" Command="{Binding TestCommand}"/>
-
+        <TextBox Text="Echarts测试" FontSize="30" />
+        <Button Content="测试" HorizontalAlignment="Left" Margin="296,0,0,0" VerticalAlignment="Center" Command="{Binding TestCommand}" />
     </Grid>
 </UserControl>

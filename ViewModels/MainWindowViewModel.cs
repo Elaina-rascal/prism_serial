@@ -2,7 +2,7 @@
 using Prism.Mvvm;
 using Prism.Regions;
 
-namespace prism_simpletemplate.ViewModels
+namespace prism_serial.ViewModels
 {
     /// <summary>
     /// Represents the view model for the main window.
@@ -10,10 +10,11 @@ namespace prism_simpletemplate.ViewModels
     public class MainWindowViewModel : BindableBase
     {
         private string _title = "Prism Application";
+
         public string Title
         {
-            get { return _title; }
-            set { SetProperty(ref _title, value); }
+            get => _title;
+            set => SetProperty(ref _title, value);
         }
 
         public MainWindowViewModel(IRegionManager regionManager)
@@ -22,19 +23,18 @@ namespace prism_simpletemplate.ViewModels
             NavigateCommand = new DelegateCommand<string>(OnNavigate);
             GoBackCommand = new DelegateCommand(() =>
             {
-                if (journal != null && journal.CanGoBack)
-                    journal.GoBack();
+                if (_journal is { CanGoBack: true })
+                    _journal.GoBack();
             });
             GoForwardCommand = new DelegateCommand(() =>
             {
-                if (journal != null && journal.CanGoForward)
-                    journal.GoForward();
+                if (_journal is { CanGoForward: true })
+                    _journal.GoForward();
             });
-
-
         }
+
         private readonly IRegionManager _regionManager;
-        private IRegionNavigationJournal journal;
+        private IRegionNavigationJournal _journal;
 
         /// <summary>
         /// Gets the command to navigate to a specific region.
@@ -55,9 +55,9 @@ namespace prism_simpletemplate.ViewModels
         {
             _regionManager.Regions["ContentRegion"].RequestNavigate(obj, callback =>
             {
-                if ((bool)callback.Result)
+                if (callback.Result != null && (bool)callback.Result)
                 {
-                    journal = callback.Context.NavigationService.Journal;
+                    _journal = callback.Context.NavigationService.Journal;
                 }
             });
         }

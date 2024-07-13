@@ -1,19 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using prism_serial.ViewModels;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using prism_simpletemplate.ViewModels;
-namespace prism_simpletemplate.Views
+
+namespace prism_serial.Views
 {
     /// <summary>
     /// View1.xaml 的交互逻辑
@@ -23,14 +12,15 @@ namespace prism_simpletemplate.Views
         public View1(View1ViewModel viewModel)
         {
             InitializeComponent();
-            this.view1ViewModel = viewModel;
+            this._view1ViewModel = viewModel;
             this.DataContext = viewModel;
         }
-        View1ViewModel view1ViewModel;
+
+        private View1ViewModel _view1ViewModel;
+
         public void OnTxBox_KeyDownCommand(object sender, KeyEventArgs e)
         {
-            view1ViewModel.OnTxBox_KeyDownCommand(sender, e);
-
+            _view1ViewModel.OnTxBox_KeyDownCommand(sender, e);
         }
     }
 }

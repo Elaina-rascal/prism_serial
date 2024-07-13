@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Input;
-using Prism.Events;
-namespace prism_simpletemplate.Views
+
+namespace prism_serial.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -12,7 +12,8 @@ namespace prism_simpletemplate.Views
         {
             InitializeComponent();
             btnMin.Click += (s, e) => { this.WindowState = WindowState.Minimized; };
-            btnMax.Click += (s, e) => {
+            btnMax.Click += (s, e) =>
+            {
                 if (this.WindowState == WindowState.Maximized)
                 {
                     this.WindowState = WindowState.Normal;
@@ -22,7 +23,6 @@ namespace prism_simpletemplate.Views
 
             btnClose.Click += (s, e) => { this.Close(); };
 
-           
             ColorZone.MouseDoubleClick += (s, e) =>
             {
                 if (this.WindowState == WindowState.Normal)
