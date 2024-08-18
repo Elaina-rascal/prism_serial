@@ -17,44 +17,6 @@ namespace prism_serial.ViewModels
         {
             this._serialPort = serialPortIn;
             TestCommand = new DelegateCommand(OnTest);
-            CarCommand = new DelegateCommand(OnCar);
-            CarStopCommand = new DelegateCommand(() =>
-            {
-                if (_serialPort.IsOpen)
-                {
-                    byte[] dataToSend = new byte[] { 0xFF,0x00,
-                        0x00, 0x00, 0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0xFE };
-
-                    // 发送数据
-                    _serialPort.Write(dataToSend, 0, dataToSend.Length);
-                  
-                }
-            });
-            ClearCommand = new DelegateCommand(() => { ControlFirst = (float)0.0; ControlSecond = (float)0.0; ControlThird = (float)0.0; });
-            GraspCommand = new DelegateCommand(() =>
-            {
-                byte[] dataBytes = new byte[]
-                {
-                    0xEA, 0x01, 0xAE
-                };
-                _serialPort.Write(dataBytes, 0, dataBytes.Length);
-            });
-            ReleaseCommand = new DelegateCommand(() =>
-            {
-                byte[] dataBytes = new byte[]
-                {
-                    0xEA, 0x00, 0xAE
-                };
-                _serialPort.Write(dataBytes, 0, dataBytes.Length);
-            });
-            ToSpecialPointCommand=new DelegateCommand(() =>
-            {
-                byte[] dataBytes = new byte[]
-                {
-                    0xEA, 0x02, 0xAE
-                };
-                _serialPort.Write(dataBytes, 0, dataBytes.Length);
-            });
         }
 
         private View2Model _obj = new View2Model();
@@ -92,106 +54,17 @@ namespace prism_serial.ViewModels
             set => _obj.ControlMode = value;
         }
 
-        //第一第二第三个控制量
-        public string ControlFirstText
-        {
-            get => _obj.ControlFirstText;
-            set { _obj.ControlFirstText = value; ControlFirst = float.Parse(value); RaisePropertyChanged(); }
-        }
-
-        public string ControlSecondText
-        {
-            get => _obj.ControlSecondText;
-            set { _obj.ControlSecondText = value; ControlSecond = float.Parse(value); RaisePropertyChanged(); }
-        }
-
-        public string ControlThirdText
-        {
-            get => _obj.ControlThirdText;
-            set { _obj.ControlThirdText = value; ControlThird = float.Parse(value); RaisePropertyChanged(); }
-        }
-
-        public float ControlFirst
-        {
-            get => _obj.ControlFirst;
-            set
-            {
-                if (_obj.ControlFirst != value)
-                {
-                    _obj.ControlFirst = value;
-                    ControlFirstText = string.Format("{0:f2}", value.ToString());
-                    RaisePropertyChanged();
-                }
-            }
-        }
-
-        public float ControlSecond
-        {
-            get => _obj.ControlSecond;
-            set
-            {
-                if (_obj.ControlSecond != value)
-                {
-                    _obj.ControlSecond = value; ControlSecondText = string.Format("{0:f2}", value.ToString());
-                }
-                RaisePropertyChanged();
-            }
-        }
-
-        public float ControlThird
-        {
-            get => _obj.ControlThird;
-            set
-            {
-                if (_obj.ControlThird != value)
-                {
-                    _obj.ControlThird = value; ControlThirdText = string.Format("{0:f2}", value.ToString());
-                    RaisePropertyChanged();
-                }
-            }
-        }
-
-        public ObservableCollection<string> ControlStr
-        {
-            get => _obj.ControlStr;
-            set => _obj.ControlStr = value;
-        }
-
-        public ObservableCollection<float> ControlFloat
-        {
-            get => _obj.ControlFloat;
-            set
-            {
-                if (_obj.ControlFloat == value) return;
-                _obj.ControlFloat = value; RaisePropertyChanged();
-                //obj.control_str = string.Format("{0:f2}", value.ToString());
-                for (int i = 0; i < value.Count; i++)
-                {
-                    _obj.ControlStr[i] = string.Format("{0:f2}", value[i].ToString());
-                }
-            }
-        }
 
         private readonly SerialPort _serialPort;
 
         private View2Model.SerialPoints serialData = new();
 
-        //command
-        public DelegateCommand CarCommand { get; set; }
-
-        public DelegateCommand CarStopCommand { get; set; }
-
-        //清零PID
-        public DelegateCommand ClearCommand { get; set; }
+      
 
         //往charpage.html传递数据
         public DelegateCommand TestCommand { get; set; }
 
-        public DelegateCommand GraspCommand { get; set; }
-
-        public DelegateCommand ReleaseCommand { get; set; }
-
-        public DelegateCommand ToSpecialPointCommand { get; set; }
+      
         public delegate void PostDelegate(string webMessageAsJson);
 
         //给Web页面传递数据
@@ -232,51 +105,6 @@ namespace prism_serial.ViewModels
          * 位置闭环帧头为0xFB帧尾为0xFA
          */
 
-        private void OnCar()
-        {
-            if (_serialPort.IsOpen)
-            {
-                byte[] floatBytes = BitConverter.GetBytes(ControlFirst);
-                byte[] floatBytes2 = BitConverter.GetBytes(ControlSecond);
-                byte[] floatBytes3 = BitConverter.GetBytes( (float)(ControlThird*Math.PI));
-                byte[] combinedBytes = new byte[15]; // 1 byte (frame head) + 12 bytes (floats) + 2 bytes (frame tail)
-
-                switch (ControlMode)
-                {
-                    case View2Model.CarControlModeT.SpeedControlSelf:
-                        combinedBytes[0] = 0xFF;
-                        break;
-
-                    case View2Model.CarControlModeT.SpeedControlGround:
-                        combinedBytes[0] = 0xFD;
-                        break;
-
-                    case View2Model.CarControlModeT.LocationControl:
-                        combinedBytes[0] = 0xFB;
-                        break;
-                }
-
-                Array.Copy(floatBytes, 0, combinedBytes, 1, 4);
-                Array.Copy(floatBytes2, 0, combinedBytes, 5, 4);
-                Array.Copy(floatBytes3, 0, combinedBytes, 9, 4);
-
-                switch (ControlMode)
-                {
-                    case View2Model.CarControlModeT.SpeedControlSelf:
-                        combinedBytes[13] = 0xFE;
-                        break;
-
-                    case View2Model.CarControlModeT.SpeedControlGround:
-                        combinedBytes[13] = 0xFC;
-                        break;
-
-                    case View2Model.CarControlModeT.LocationControl:
-                        combinedBytes[13] = 0xFA;
-                        break;
-                }
-
-                _serialPort.Write(combinedBytes, 0, 15);
-            }
-        }
+        
     }
 }

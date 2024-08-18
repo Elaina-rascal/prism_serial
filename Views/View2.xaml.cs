@@ -18,9 +18,7 @@ namespace prism_serial.Views
             web.Source = new Uri(System.IO.Directory.GetCurrentDirectory() + @"\Common\mychart.html");
             web.NavigationCompleted += Web_NavigationCompleted;
 
-            text1.KeyDown += Keyenterdown;
-            text2.KeyDown += Keyenterdown;
-            text3.KeyDown += Keyenterdown;
+          
             //view2ViewModel.postDelegate = new View2ViewModel.PostDelegate(web.CoreWebView2.PostWebMessageAsJson);
         }
 

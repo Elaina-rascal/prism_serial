@@ -1,3 +1,2 @@
-2024/08/08-15:04:27.801 9744 Reusing MANIFEST G:\project\c#\prism_serial_\bin\Debug\net6.0-windows\prism_serial.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
-2024/08/08-15:04:27.805 9744 Recovering log #3
-2024/08/08-15:04:27.813 9744 Reusing old log G:\project\c#\prism_serial_\bin\Debug\net6.0-windows\prism_serial.exe.WebView2\EBWebView\Default\Local Storage\leveldb/000003.log 
+2024/08/18-10:16:08.637 40f4 Creating DB G:\project\c#\prism_serial_\bin\Debug\net6.0-windows\prism_serial.exe.WebView2\EBWebView\Default\Local Storage\leveldb since it was missing.
+2024/08/18-10:16:08.647 40f4 Reusing MANIFEST G:\project\c#\prism_serial_\bin\Debug\net6.0-windows\prism_serial.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
