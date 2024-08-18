@@ -23,13 +23,38 @@ namespace prism_serial.ViewModels
                 if (_serialPort.IsOpen)
                 {
                     byte[] dataToSend = new byte[] { 0xFF,0x00,
-                        0x00, 0x00, 0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0xFE };
+                        0x00, 0x00, 0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0xFE };
 
                     // 发送数据
                     _serialPort.Write(dataToSend, 0, dataToSend.Length);
+                  
                 }
             });
             ClearCommand = new DelegateCommand(() => { ControlFirst = (float)0.0; ControlSecond = (float)0.0; ControlThird = (float)0.0; });
+            GraspCommand = new DelegateCommand(() =>
+            {
+                byte[] dataBytes = new byte[]
+                {
+                    0xEA, 0x01, 0xAE
+                };
+                _serialPort.Write(dataBytes, 0, dataBytes.Length);
+            });
+            ReleaseCommand = new DelegateCommand(() =>
+            {
+                byte[] dataBytes = new byte[]
+                {
+                    0xEA, 0x00, 0xAE
+                };
+                _serialPort.Write(dataBytes, 0, dataBytes.Length);
+            });
+            ToSpecialPointCommand=new DelegateCommand(() =>
+            {
+                byte[] dataBytes = new byte[]
+                {
+                    0xEA, 0x02, 0xAE
+                };
+                _serialPort.Write(dataBytes, 0, dataBytes.Length);
+            });
         }
 
         private View2Model _obj = new View2Model();
@@ -149,6 +174,8 @@ namespace prism_serial.ViewModels
 
         private readonly SerialPort _serialPort;
 
+        private View2Model.SerialPoints serialData = new();
+
         //command
         public DelegateCommand CarCommand { get; set; }
 
@@ -160,31 +187,43 @@ namespace prism_serial.ViewModels
         //往charpage.html传递数据
         public DelegateCommand TestCommand { get; set; }
 
+        public DelegateCommand GraspCommand { get; set; }
+
+        public DelegateCommand ReleaseCommand { get; set; }
+
+        public DelegateCommand ToSpecialPointCommand { get; set; }
         public delegate void PostDelegate(string webMessageAsJson);
 
+        //给Web页面传递数据
         public PostDelegate postDelegate;
 
         private void OnTest()
         {
-            Task.Run(() =>//测试模拟后台输出文件
+            //Task.Run(() =>//测试模拟后台输出文件
+            //{
+            //    var sePoints1 = new double[20, 2];
+            //    for (int i = 0; i < 20; i++)
+            //    {
+            //        Thread.Sleep(2000);
+            //        sePoints1[i, 0] = i;
+            //        sePoints1[i, 1] = i * 1.2;
+            //        Console.WriteLine("do Task work,i={0}", i);
+            //    }
+            //});
+            ////Web.ObjectForScripting.
+            //var sePoints = new double[20, 2];
+            //for (int i = 0; i < 20; i++)
+            //{
+            //    sePoints[i, 0] = i;
+            //    sePoints[i, 1] = i * 1.2;
+            //}
+            for (int i = 0;i< 20; i++)
             {
-                var sePoints1 = new double[20, 2];
-                for (int i = 0; i < 20; i++)
-                {
-                    Thread.Sleep(2000);
-                    sePoints1[i, 0] = i;
-                    sePoints1[i, 1] = i * 1.2;
-                    Console.WriteLine("do Task work,i={0}", i);
-                }
-            });
-            //Web.ObjectForScripting.
-            var sePoints = new double[20, 2];
-            for (int i = 0; i < 20; i++)
-            {
-                sePoints[i, 0] = i;
-                sePoints[i, 1] = i * 1.2;
+                serialData._x.Add(i);
+                serialData._y.Add(i * 1.2);
             }
-            postDelegate?.Invoke(JsonConvert.SerializeObject(sePoints));
+            //serialData._x.Add();
+            postDelegate?.Invoke(JsonConvert.SerializeObject(serialData));
         }
 
         /*
@@ -199,7 +238,7 @@ namespace prism_serial.ViewModels
             {
                 byte[] floatBytes = BitConverter.GetBytes(ControlFirst);
                 byte[] floatBytes2 = BitConverter.GetBytes(ControlSecond);
-                byte[] floatBytes3 = BitConverter.GetBytes(ControlThird);
+                byte[] floatBytes3 = BitConverter.GetBytes( (float)(ControlThird*Math.PI));
                 byte[] combinedBytes = new byte[15]; // 1 byte (frame head) + 12 bytes (floats) + 2 bytes (frame tail)
 
                 switch (ControlMode)

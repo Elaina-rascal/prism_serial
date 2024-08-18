@@ -180,9 +180,6 @@ G:\project\c#\prism_serial_\bin\Debug\net6.0-windows\MaterialDesignColors.dll
 G:\project\c#\prism_serial_\bin\Debug\net6.0-windows\MaterialDesignThemes.Wpf.dll
 G:\project\c#\prism_serial_\bin\Debug\net6.0-windows\Microsoft.Xaml.Behaviors.dll
 G:\project\c#\prism_serial_\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
-G:\project\c#\prism_serial_\bin\Debug\net6.0-windows\OxyPlot.dll
-G:\project\c#\prism_serial_\bin\Debug\net6.0-windows\OxyPlot.Wpf.dll
-G:\project\c#\prism_serial_\bin\Debug\net6.0-windows\OxyPlot.Wpf.Shared.dll
 G:\project\c#\prism_serial_\bin\Debug\net6.0-windows\Prism.dll
 G:\project\c#\prism_serial_\bin\Debug\net6.0-windows\Prism.DryIoc.Wpf.dll
 G:\project\c#\prism_serial_\bin\Debug\net6.0-windows\Prism.Wpf.dll
@@ -226,3 +223,4 @@ G:\project\c#\prism_serial_\obj\Debug\net6.0-windows\refint\prism_serial.dll
 G:\project\c#\prism_serial_\obj\Debug\net6.0-windows\prism_serial.pdb
 G:\project\c#\prism_serial_\obj\Debug\net6.0-windows\prism_serial.genruntimeconfig.cache
 G:\project\c#\prism_serial_\obj\Debug\net6.0-windows\ref\prism_serial.dll
+G:\project\c#\prism_serial_\bin\Debug\net6.0-windows\Common\mychart.html

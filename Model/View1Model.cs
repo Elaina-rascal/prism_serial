@@ -13,7 +13,7 @@ namespace prism_serial.Model
             Com = new ObservableCollection<string>();
             //log=new ObservableCollection<string>();
             //log = new ObservableCollection<MessageItem>();
-            BaudrateSelect = 9600;
+            BaudrateSelect = 115200;
             IsComBaudEnable = true;
             IsvisualData = false;
         }
@@ -28,9 +28,6 @@ namespace prism_serial.Model
         { get; set; }
 
         public ObservableCollection<string> Com { get; set; }
-        //public ObservableCollection<string> log {  get; set; }
-
-        //public ObservableCollection<MessageItem> log { get; set; }
         public List<int> Baudrate = new() { 9600, 115200, 1152000, 2000000 };
 
         public bool IsComBaudEnable { get; set; }

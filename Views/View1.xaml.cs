@@ -22,5 +22,6 @@ namespace prism_serial.Views
         {
             _view1ViewModel.OnTxBox_KeyDownCommand(sender, e);
         }
+
     }
 }

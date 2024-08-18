@@ -20,20 +20,7 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <TextBlock Text="333" FontSize="30" />
-            <ScrollViewer Grid.Column="1" HorizontalScrollBarVisibility="Visible"
-		VerticalScrollBarVisibility="Visible" Margin="10,0,10,10">
-                <oxyWpf:PlotView Grid.Row="1"  Model="{Binding Plot}">
-                    <oxyWpf:PlotView.DefaultTrackerTemplate>
-                        <ControlTemplate>
-                            <oxyWpf:TrackerControl Position="{Binding Position}" ShowPointer="True" CornerRadius="8" BorderEdgeMode="Unspecified"  Background="White" BorderThickness="1" BorderBrush="Black" Distance="0" Margin="0" Opacity="0.8">
-                                <oxyWpf:TrackerControl.Content>
-                                    <TextBlock Text="{Binding}" Margin="7" />
-                                </oxyWpf:TrackerControl.Content>
-                            </oxyWpf:TrackerControl>
-                        </ControlTemplate>
-                    </oxyWpf:PlotView.DefaultTrackerTemplate>
-                </oxyWpf:PlotView>
-            </ScrollViewer>
+       
         </Grid>
 
         <Button Content="测试" HorizontalAlignment="Left" Margin="296,0,0,0" VerticalAlignment="Center" Command="{Binding TestCommand}" />

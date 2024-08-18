@@ -24,9 +24,10 @@ namespace prism_serial.ViewModels
         /// </summary>
         /// <param name="eventAggregator">The event aggregator.</param>
         /// <param name="serialPortin">The serial port.</param>
-        public View1ViewModel(IEventAggregator eventAggregator, SerialPort serialPortin)
+        public View1ViewModel(IEventAggregator eventAggregator, SerialPort serialPortin, Thread dataTransThread)
         {
             this._serialPort = serialPortin;
+            _dataTransThread = dataTransThread;
             this._eventAggregator = eventAggregator;
 
             _serialPort.Encoding = Encoding.UTF8;
@@ -36,7 +37,7 @@ namespace prism_serial.ViewModels
             OpenCloseCommand = new DelegateCommand<object>(OnOpenCloseCommand);
             TransClearCommand = new DelegateCommand<object>(obj => TransText = "");
             TransButtonClickCommand = new DelegateCommand<object>(obj => TransData(_dataTransThread));
-
+            ChangEncoderCommand= new DelegateCommand<object>(OnChangeEncoder);
             _timer.Interval = new TimeSpan(0, 0, 1);
             _timer.Tick += (s, e) => { SearchAvailableCom(); };
             _timer.IsEnabled = true;
@@ -136,6 +137,8 @@ namespace prism_serial.ViewModels
             set { _obj.IsComBaudEnable = value; RaisePropertyChanged(); }
         }
 
+        
+        private bool _use_utf_8 = true;
         // Bindable commands
         /// <summary>
         /// Gets or sets the command for the button.
@@ -162,13 +165,32 @@ namespace prism_serial.ViewModels
         /// </summary>
         public DelegateCommand<object> TransButtonClickCommand { get; set; }
 
+        public DelegateCommand <object> ChangEncoderCommand { get; set; }
+
         // Event handlers
         private void SerialDataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
         {
             try
             {
-                string receivedText = _serialPort.ReadExisting();
-                ReceivedText = ReceivedText + receivedText;
+                byte[] buffer = new byte[_serialPort.BytesToRead];
+                _serialPort.Read(buffer, 0, buffer.Length);
+
+                // 根据编码方式处理数据
+                string receivedText;
+                if (_use_utf_8)
+                {
+                    receivedText = Encoding.UTF8.GetString(buffer);
+                }
+                else
+                {
+                    StringBuilder hex = new StringBuilder(buffer.Length * 2);
+                    foreach (byte b in buffer)
+                    {
+                        hex.AppendFormat("{0:x2} ", b);
+                    }
+                    receivedText = hex.ToString();
+                }
+                ReceivedText+= receivedText;
             }
             catch
             {
@@ -226,16 +248,6 @@ namespace prism_serial.ViewModels
             }
         }
 
-        //[Obsolete("Use dependency injection to share a Serial instance.", true)]
-        //private void PubSerialData()
-        //{
-        //    if (IsComBaudEnable == false)
-        //    {
-        //        eventAggregator.GetEvent<SerialMessage>().Publish(pubDate);
-        //        pubDate = string.Empty;
-        //    }
-        //}
-
         private void OnOpenCloseCommand(object? obj)
         {
             System.Windows.Controls.Button button = (System.Windows.Controls.Button)obj;
@@ -266,6 +278,26 @@ namespace prism_serial.ViewModels
                 {
                     System.Windows.MessageBox.Show("Error: " + "串口异常");
                 }
+            }
+        }
+
+        private void OnChangeEncoder(object? obj)
+        {
+            System.Windows.Controls.Button button = (System.Windows.Controls.Button)obj;
+            if (button.Content.ToString() == "Abc")
+            {
+                button.Content = "Hex";
+                //将编码方式改为16进制
+                //_serialPort.Encoding = Encoding.Unicode;
+                _use_utf_8 = false;
+
+            }
+            else if (button.Content.ToString() == "Hex")
+            {
+                button.Content = "Abc";
+                //将编码方式改为UTF-8
+                //_serialPort.Encoding = Encoding.UTF8;
+                _use_utf_8 = true;
             }
         }
 

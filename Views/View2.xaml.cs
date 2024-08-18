@@ -15,7 +15,7 @@ namespace prism_serial.Views
             this._view2ViewModel = view2ViewModel;
             this.DataContext = view2ViewModel;
             InitializeComponent();
-            web.Source = new Uri(System.IO.Directory.GetCurrentDirectory() + "\\Common\\charpage.html");
+            web.Source = new Uri(System.IO.Directory.GetCurrentDirectory() + @"\Common\mychart.html");
             web.NavigationCompleted += Web_NavigationCompleted;
 
             text1.KeyDown += Keyenterdown;

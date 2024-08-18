@@ -33,5 +33,12 @@ namespace prism_serial.Model
             SpeedControlSelf,
             SpeedControlGround,
         }
+        //发给html的数据
+        public class SerialPoints
+        {
+            public List<double> _x { set; get; } = new();
+            public List<double> _y { set; get; } = new();
+        }
+
     }
 }
