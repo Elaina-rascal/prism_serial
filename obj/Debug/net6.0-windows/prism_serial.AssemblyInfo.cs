@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("prism_serial")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7243928626b0b019156152c30e814c6abed74285")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8005c1d4b74fc43e8d4ccb6677826fd01f77f280")]
 [assembly: System.Reflection.AssemblyProductAttribute("prism_serial")]
 [assembly: System.Reflection.AssemblyTitleAttribute("prism_serial")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

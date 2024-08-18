@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "G:\\project\\c#\\prism_serial_\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_\\viewmodels\\view2viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:viewmodels\\view2viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -59,10 +63,6 @@
       "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:common\\echarts.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|g:\\project\\c#\\prism_serial_\\common\\charpage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DFF0BAB9-E2BE-4BD0-940A-6DBA04BD1213}|prism_serial.csproj|solutionrelative:common\\charpage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -111,36 +111,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 0,
               "Title": "MainWindowViewModel.cs",
               "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\ViewModels\\MainWindowViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\MainWindowViewModel.cs",
               "ToolTip": "G:\\project\\c#\\prism_serial_\\ViewModels\\MainWindowViewModel.cs",
               "RelativeToolTip": "ViewModels\\MainWindowViewModel.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABwAAAAyAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-17T11:00:19.426Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "View1.xaml",
               "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\Views\\View1.xaml",
               "RelativeDocumentMoniker": "Views\\View1.xaml",
               "ToolTip": "G:\\project\\c#\\prism_serial_\\Views\\View1.xaml",
               "RelativeToolTip": "Views\\View1.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-11T07:07:15.136Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-11T07:07:15.136Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "View1.xaml.cs",
               "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\Views\\View1.xaml.cs",
               "RelativeDocumentMoniker": "Views\\View1.xaml.cs",
@@ -148,12 +148,11 @@
               "RelativeToolTip": "Views\\View1.xaml.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAAABoAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T11:46:41.782Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-10T11:46:41.782Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "View2.xaml.cs",
               "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\Views\\View2.xaml.cs",
               "RelativeDocumentMoniker": "Views\\View2.xaml.cs",
@@ -161,12 +160,11 @@
               "RelativeToolTip": "Views\\View2.xaml.cs",
               "ViewState": "AQIAACEAAAAAAAAAAAAAABEAAABeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-11T05:34:23.025Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-11T05:34:23.025Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "View3.xaml.cs",
               "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\Views\\View3.xaml.cs",
               "RelativeDocumentMoniker": "Views\\View3.xaml.cs",
@@ -174,25 +172,24 @@
               "RelativeToolTip": "Views\\View3.xaml.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T10:49:41.036Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-17T10:49:41.036Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "View2ViewModel.cs",
               "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\ViewModels\\View2ViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\View2ViewModel.cs",
               "ToolTip": "G:\\project\\c#\\prism_serial_\\ViewModels\\View2ViewModel.cs",
               "RelativeToolTip": "ViewModels\\View2ViewModel.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAAC4AAAASAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-10T10:27:53.781Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\App.xaml.cs",
               "RelativeDocumentMoniker": "App.xaml.cs",
@@ -200,12 +197,11 @@
               "RelativeToolTip": "App.xaml.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAApwB0AAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T11:14:26.444Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-10T11:14:26.444Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "View1ViewModel.cs",
               "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\ViewModels\\View1ViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\View1ViewModel.cs",
@@ -213,12 +209,11 @@
               "RelativeToolTip": "ViewModels\\View1ViewModel.cs",
               "ViewState": "AQIAAKoAAAAAAAAAAAAAAGIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-11T06:07:24.187Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-11T06:07:24.187Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "View3ViewModel.cs",
               "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\ViewModels\\View3ViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\View3ViewModel.cs",
@@ -226,12 +221,11 @@
               "RelativeToolTip": "ViewModels\\View3ViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-12T17:43:07.833Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-12T17:43:07.833Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\Views\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Views\\MainWindow.xaml.cs",
@@ -239,12 +233,11 @@
               "RelativeToolTip": "Views\\MainWindow.xaml.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABsAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T11:46:11.814Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-10T11:46:11.814Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "View2.xaml",
               "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\Views\\View2.xaml",
               "RelativeDocumentMoniker": "Views\\View2.xaml",
@@ -255,7 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "View1Model.cs",
               "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\Model\\View1Model.cs",
               "RelativeDocumentMoniker": "Model\\View1Model.cs",
@@ -267,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "View2Model.cs",
               "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\Model\\View2Model.cs",
               "RelativeDocumentMoniker": "Model\\View2Model.cs",
@@ -279,7 +272,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "mychart.html",
               "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\Common\\mychart.html",
               "RelativeDocumentMoniker": "Common\\mychart.html",
@@ -310,12 +303,11 @@
               "ToolTip": "G:\\project\\c#\\prism_serial_\\Views\\View3.xaml",
               "RelativeToolTip": "Views\\View3.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-12T17:43:06.445Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-12T17:43:06.445Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "echarts.js",
               "DocumentMoniker": "G:\\project\\c#\\prism_serial_\\Common\\echarts.js",
               "RelativeDocumentMoniker": "Common\\echarts.js",
@@ -356,8 +348,7 @@
               "ToolTip": "G:\\project\\c#\\prism_serial_\\App.xaml",
               "RelativeToolTip": "App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-12T18:42:36.598Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-12T18:42:36.598Z"
             },
             {
               "$type": "Document",

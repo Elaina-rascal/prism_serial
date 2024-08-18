@@ -4,6 +4,7 @@ using Prism.Regions;
 
 namespace prism_serial.ViewModels
 {
+    //为了git
     /// <summary>
     /// Represents the view model for the main window.
     /// </summary>
