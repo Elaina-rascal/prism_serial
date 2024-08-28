@@ -51,6 +51,7 @@
         </Button>
         <Button Content="发送" Command="{Binding TransButtonClickCommand}" Style="{StaticResource MaterialDesignFlatLightButton}" FontSize="10" HorizontalAlignment="Left" Margin="675,296,0,0" Grid.Row="2" VerticalAlignment="Top" Height="24" Opacity="0.5" Width="55" Background="#FFC8C6C6" />
         <Button  Content="Abc" Command="{Binding ChangEncoderCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}}" HorizontalAlignment="Left" Margin="651,29,0,0" Style="{StaticResource MaterialDesignFlatButton}"  VerticalAlignment="Top" Width="55" Height="24" Opacity="0.75" RenderTransformOrigin="2.981,0.62" Background="{x:Null}" Foreground="#FF07030E" FontSize="12"  FontWeight="Bold" BorderBrush="{x:Null}"/>
+        <Label Content="{Binding ComDetialedInfo }"  HorizontalAlignment="Left" Margin="171,149,0,0" VerticalAlignment="Top" Width="265" Height="24" Grid.Row="1" Grid.Column="1" />
 
     </Grid>
 </UserControl>

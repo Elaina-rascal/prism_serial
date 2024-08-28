@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1/iHATxZlIE=",
+  "dgSpecHash": "nvjW6F16OEM=",
   "success": true,
-  "projectFilePath": "G:\\project\\c#\\prism_serial_\\prism_serial.csproj",
+  "projectFilePath": "D:\\qq shuju\\1463967532\\FileRecv\\prism_serial_ (2)\\prism_serial.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\chaffer\\.nuget\\packages\\dryioc.dll\\4.7.7\\dryioc.dll.4.7.7.nupkg.sha512",
     "C:\\Users\\chaffer\\.nuget\\packages\\materialdesigncolors\\3.1.0-ci651\\materialdesigncolors.3.1.0-ci651.nupkg.sha512",
@@ -21,8 +21,10 @@
     "C:\\Users\\chaffer\\.nuget\\packages\\runtime.native.system.io.ports\\8.0.0\\runtime.native.system.io.ports.8.0.0.nupkg.sha512",
     "C:\\Users\\chaffer\\.nuget\\packages\\runtime.osx-arm64.runtime.native.system.io.ports\\8.0.0\\runtime.osx-arm64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
     "C:\\Users\\chaffer\\.nuget\\packages\\runtime.osx-x64.runtime.native.system.io.ports\\8.0.0\\runtime.osx-x64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\chaffer\\.nuget\\packages\\system.codedom\\8.0.0\\system.codedom.8.0.0.nupkg.sha512",
     "C:\\Users\\chaffer\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
     "C:\\Users\\chaffer\\.nuget\\packages\\system.io.ports\\8.0.0\\system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\chaffer\\.nuget\\packages\\system.management\\8.0.0\\system.management.8.0.0.nupkg.sha512",
     "C:\\Users\\chaffer\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
     "C:\\Users\\chaffer\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.3.0\\system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512",
     "C:\\Users\\chaffer\\.nuget\\packages\\system.reflection.emit.lightweight\\4.3.0\\system.reflection.emit.lightweight.4.3.0.nupkg.sha512",

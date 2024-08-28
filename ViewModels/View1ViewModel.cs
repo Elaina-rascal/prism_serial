@@ -11,6 +11,8 @@ using System.Text;
 using System.Threading;
 using System.Windows.Input;
 using System.Windows.Threading;
+using System.Management;
+using prism_serial.Common.Events;
 
 namespace prism_serial.ViewModels
 {
@@ -37,9 +39,13 @@ namespace prism_serial.ViewModels
             OpenCloseCommand = new DelegateCommand<object>(OnOpenCloseCommand);
             TransClearCommand = new DelegateCommand<object>(obj => TransText = "");
             TransButtonClickCommand = new DelegateCommand<object>(obj => TransData(_dataTransThread));
-            ChangEncoderCommand= new DelegateCommand<object>(OnChangeEncoder);
+            ChangEncoderCommand = new DelegateCommand<object>(OnChangeEncoder);
             _timer.Interval = new TimeSpan(0, 0, 1);
-            _timer.Tick += (s, e) => { SearchAvailableCom(); };
+            _timer.Tick += (s, e) =>
+            {
+                SearchAvailableCom();
+                GetAllComInfo(ComNameList);
+            };
             _timer.IsEnabled = true;
         }
 
@@ -73,7 +79,11 @@ namespace prism_serial.ViewModels
         public string TransText
         {
             get => _obj.TransText;
-            set { _obj.TransText = value; RaisePropertyChanged(); }
+            set
+            {
+                _obj.TransText = value;
+                RaisePropertyChanged();
+            }
         }
 
         /// <summary>
@@ -88,6 +98,7 @@ namespace prism_serial.ViewModels
                 {
                     _obj.ShowText = value.Replace(@"\n", Environment.NewLine);
                 }
+
                 RaisePropertyChanged();
             }
         }
@@ -98,7 +109,11 @@ namespace prism_serial.ViewModels
         public List<int> Baudrate
         {
             get => (List<int>)_obj.Baudrate;
-            set { _obj.Baudrate = value; RaisePropertyChanged(); }
+            set
+            {
+                _obj.Baudrate = value;
+                RaisePropertyChanged();
+            }
         }
 
         /// <summary>
@@ -107,7 +122,21 @@ namespace prism_serial.ViewModels
         public ObservableCollection<string> Com
         {
             get => _obj.Com;
-            set { _obj.Com = value; RaisePropertyChanged(); }
+            set
+            {
+                _obj.Com = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        public string ComDetialedInfo
+        {
+            get => _obj.ComDetialedInfo;
+            set
+            {
+                _obj.ComDetialedInfo = value;
+                RaisePropertyChanged();
+            }
         }
 
         /// <summary>
@@ -116,7 +145,11 @@ namespace prism_serial.ViewModels
         public int BaudrateSelect
         {
             get => (int)_obj.BaudrateSelect;
-            set { _obj.BaudrateSelect = value; RaisePropertyChanged(); }
+            set
+            {
+                _obj.BaudrateSelect = value;
+                RaisePropertyChanged();
+            }
         }
 
         /// <summary>
@@ -125,8 +158,16 @@ namespace prism_serial.ViewModels
         public string ComSelect
         {
             get => _obj.ComSelect;
-            set { _obj.ComSelect = value; RaisePropertyChanged(); }
+            set
+            {
+                _obj.ComSelect = value;
+                RaisePropertyChanged();
+                MatchComInfo(ComNameList, value);
+
+            }
         }
+
+        public List<string> ComNameList = new();
 
         /// <summary>
         /// Gets or sets a value indicating whether the COM port and baud rate selection is enabled.
@@ -134,11 +175,16 @@ namespace prism_serial.ViewModels
         public bool IsComBaudEnable
         {
             get => _obj.IsComBaudEnable;
-            set { _obj.IsComBaudEnable = value; RaisePropertyChanged(); }
+            set
+            {
+                _obj.IsComBaudEnable = value;
+                RaisePropertyChanged();
+            }
         }
 
-        
+
         private bool _use_utf_8 = true;
+
         // Bindable commands
         /// <summary>
         /// Gets or sets the command for the button.
@@ -165,7 +211,7 @@ namespace prism_serial.ViewModels
         /// </summary>
         public DelegateCommand<object> TransButtonClickCommand { get; set; }
 
-        public DelegateCommand <object> ChangEncoderCommand { get; set; }
+        public DelegateCommand<object> ChangEncoderCommand { get; set; }
 
         // Event handlers
         private void SerialDataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
@@ -188,9 +234,11 @@ namespace prism_serial.ViewModels
                     {
                         hex.AppendFormat("{0:x2} ", b);
                     }
+
                     receivedText = hex.ToString();
                 }
-                ReceivedText+= receivedText;
+                _eventAggregator.GetEvent<SerialMessage>().Publish(receivedText);
+                ReceivedText += receivedText;
             }
             catch
             {
@@ -290,6 +338,8 @@ namespace prism_serial.ViewModels
                 //将编码方式改为16进制
                 //_serialPort.Encoding = Encoding.Unicode;
                 _use_utf_8 = false;
+                //把DataReceived转化成16进制
+             
 
             }
             else if (button.Content.ToString() == "Hex")
@@ -388,6 +438,51 @@ namespace prism_serial.ViewModels
                 {
                     System.Windows.MessageBox.Show("Error: " + "串口异常");
                 }
+            }
+        }
+
+        //匹配串口信息
+        private void MatchComInfo(List<string> comNameList, string comName)
+        {
+            string comInfo = "";
+            foreach (string com in comNameList)
+            {
+                if (com.Contains(comName))
+                {
+                    comInfo = com;
+                    break;
+                }
+            }
+
+            ComDetialedInfo = comInfo;
+        }
+
+
+
+        //获得所有串口数据
+        private void GetAllComInfo(List<string> comNameList)
+        {
+            try
+            {
+                // 使用指定查询创建搜索器
+                using (ManagementObjectSearcher searcher =
+                       new ManagementObjectSearcher("SELECT Name FROM Win32_PnPEntity WHERE Caption LIKE '%(COM%'"))
+                {
+                    // 仅获取前几个结果以限制CPU负载
+                    foreach (ManagementObject device in searcher.Get().OfType<ManagementObject>().Take(5))
+                    {
+                        if (device["Name"] != null)
+                        {
+                            string name = device["Name"].ToString();
+                            comNameList.Add(name);
+                        }
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                System.Windows.MessageBox.Show("Error: " + ex.Message);
             }
         }
     }

@@ -17,7 +17,8 @@ namespace prism_serial.Model
             IsComBaudEnable = true;
             IsvisualData = false;
         }
-
+        public string ComDetialedInfo
+        { get; set; }
         public string ReceivedText
         { get; set; }
 

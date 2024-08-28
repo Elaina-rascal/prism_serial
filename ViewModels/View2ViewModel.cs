@@ -8,57 +8,31 @@ using System.Collections.ObjectModel;
 using System.IO.Ports;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows;
+using Prism.Events;
+using prism_serial.Common.Events;
 
 namespace prism_serial.ViewModels
 {
     public class View2ViewModel : BindableBase
     {
-        public View2ViewModel(SerialPort serialPortIn)
+        public View2ViewModel(IEventAggregator aggregator)
         {
-            this._serialPort = serialPortIn;
-            TestCommand = new DelegateCommand(OnTest);
+           
+            this._eventAggregator = aggregator;
+            TestCommand = new DelegateCommand(() => { isVisual = !isVisual;});
+            
+            //_serialPort.DataReceived += SerialDataVisual;
+            _eventAggregator.GetEvent<SerialMessage>().Subscribe(OnDataVisual);
         }
 
         private View2Model _obj = new View2Model();
+        private readonly IEventAggregator _eventAggregator;
 
-        public string TextListSelected
-        {
-            get => _obj.TextListSelected;
-            set
-            {
-                _obj.TextListSelected = value;
-                if (value == "车身速度")
-                {
-                    ControlMode = View2Model.CarControlModeT.SpeedControlSelf;
-                }
-                else if (value == "大地速度")
-                {
-                    ControlMode = View2Model.CarControlModeT.SpeedControlGround;
-                }
-                else if (value == "位置闭环")
-                {
-                    ControlMode = View2Model.CarControlModeT.LocationControl;
-                }
-            }
-        }
-
-        public List<string> TextListControl
-        {
-            get => _obj.TextListControl;
-            set => _obj.TextListControl = value;
-        }
-
-        public View2Model.CarControlModeT ControlMode
-        {
-            get => _obj.ControlMode;
-            set => _obj.ControlMode = value;
-        }
-
-
-        private readonly SerialPort _serialPort;
 
         private View2Model.SerialPoints serialData = new();
 
+        private bool isVisual = false;
       
 
         //往charpage.html传递数据
@@ -70,6 +44,51 @@ namespace prism_serial.ViewModels
         //给Web页面传递数据
         public PostDelegate postDelegate;
 
+        private void SerialDataVisual(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
+        {
+            if(isVisual) 
+            {
+                var serialPort = (SerialPort)sender;
+                var data = serialPort.ReadExisting();
+                try
+                {
+                    serialData._y.Add(Convert.ToDouble(data));
+                    serialData._x.Add(serialData._x.Count);
+                    //postDelegate?.Invoke(JsonConvert.SerializeObject(serialData));
+                    Application.Current.Dispatcher.Invoke(() =>
+                    {
+                        postDelegate?.Invoke(JsonConvert.SerializeObject(serialData));
+                    });
+                    //清空数据
+                    serialData._x.Clear();
+                    serialData._y.Clear();
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("数据转换失败");
+                }
+            }
+        }
+        private void OnDataVisual(string data)
+        {
+            try
+            {
+                serialData._y.Add(Convert.ToDouble(data));
+                serialData._x.Add(serialData._x.Count);
+                //postDelegate?.Invoke(JsonConvert.SerializeObject(serialData));
+                Application.Current.Dispatcher.Invoke(() =>
+                {
+                    postDelegate?.Invoke(JsonConvert.SerializeObject(serialData));
+                });
+                //清空数据
+                serialData._x.Clear();
+                serialData._y.Clear();
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("数据转换失败");
+            }
+        }
         private void OnTest()
         {
             //Task.Run(() =>//测试模拟后台输出文件
@@ -98,12 +117,6 @@ namespace prism_serial.ViewModels
             //serialData._x.Add();
             postDelegate?.Invoke(JsonConvert.SerializeObject(serialData));
         }
-
-        /*
-         * 车速度帧头为0xFF帧尾为0xFE
-         * 大地速度帧头为0xFD帧尾为0xFC
-         * 位置闭环帧头为0xFB帧尾为0xFA
-         */
 
         
     }
