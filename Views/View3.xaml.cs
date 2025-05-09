@@ -9,7 +9,7 @@ namespace prism_serial.Views
     {
         public View3()
         {
-            //InitializeComponent();
+            InitializeComponent();
         }
     }
 }

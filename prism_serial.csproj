@@ -5,6 +5,7 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Images\xbox.png" />
     <None Remove="Views\1.bmp" />
     <None Remove="Views\N0[QBE%40LZRH1%28IPH{KX%24NJ1.png" />
   </ItemGroup>
@@ -18,9 +19,7 @@
     <PackageReference Include="System.Management" Version="8.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Images\" />
-  </ItemGroup>
-  <ItemGroup>
+    <Resource Include="Images\xbox.png" />
     <Resource Include="Views\1.bmp" />
     <Resource Include="Views\N0[QBE@LZRH1(IPH{KX$NJ1.png" />
   </ItemGroup>
