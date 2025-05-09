@@ -18,15 +18,22 @@ namespace prism_serial.ViewModels
         {
             _serial = serialPortin;
             _controller = null;
-            if (!_controller.IsConnected)
+           
+            CarCommand = new DelegateCommand(() => {
+            CarCommandToSerial(_xboxData.LeftThumbX, _xboxData.LeftThumbY, _xboxData.RightThumbX);
+            });
+            ClearCommand = new DelegateCommand(() =>
             {
-                Console.WriteLine("Xbox Controller not connected.");
-                return;
-            }
-
-            //_timer = new Timer(100); // 10 Hz
-            //_timer.Elapsed += (s, e) => ReadController();
-            //_timer.Start();
+                _carData.ControlX = 0;
+                _carData.ControlY = 0;
+                _carData.ControlYaw = 0;
+            });
+            CarStopCommand = new DelegateCommand(() =>
+            {
+                ControlMode = ControlMode_t.SpeedControlSelf;
+                
+                CarCommandToSerial(0.0f,0.0f,0.0f);
+            });
             StartReadingController();
         }
         SerialPort _serial ;
@@ -74,6 +81,14 @@ namespace prism_serial.ViewModels
         {
             get => _obj.ControlMode; set { _obj.ControlMode=value; RaisePropertyChanged(); }
         }
+        //command
+        public DelegateCommand CarCommand { get; set; }
+
+        public DelegateCommand CarStopCommand { get; set; }
+
+        //清零设定值
+        public DelegateCommand ClearCommand { get; set; }
+
         public List<string> TextListControl
         {
             get => _obj.TextListControl;
@@ -183,5 +198,53 @@ namespace prism_serial.ViewModels
                 }
             }
         }
+        private void CarCommandToSerial(float linear_x,float linear_y,float angular_z)
+        {
+            if (_serial.IsOpen)
+            {
+                byte[] floatBytes = BitConverter.GetBytes(linear_x);
+                byte[] floatBytes2 = BitConverter.GetBytes(linear_y);
+                byte[] floatBytes3 = BitConverter.GetBytes( (float)(angular_z*Math.PI));
+                List<byte> dataList = new List<byte>();
+                byte frameHead=0x00;
+                switch (ControlMode)
+                {
+                    case ControlMode_t.SpeedControlSelf:
+                        frameHead = 0xFF;
+                        break;
+
+                    case ControlMode_t.SpeedControlGround:
+                        frameHead = 0xFD;
+                        break;
+
+                    case ControlMode_t.LocationControl:
+                        frameHead = 0xFB;
+                        break;
+                }
+                dataList.Add(frameHead); // 添加帧头
+                dataList.AddRange(floatBytes); // 添加 xBytes
+                dataList.AddRange(floatBytes2); // 添加 yBytes
+                dataList.AddRange(floatBytes3); // 添加 yBytes
+                byte frameTail = 0x00;
+                switch (ControlMode)
+                {
+                    case ControlMode_t.SpeedControlSelf:
+                        frameTail = 0xFE;
+                        break;
+
+                    case ControlMode_t.SpeedControlGround:
+                        frameTail = 0xFC;
+                        break;
+
+                    case ControlMode_t.LocationControl:
+                        frameTail = 0xFA;
+                        break;
+                }
+                dataList.Add(frameTail); // 添加帧尾
+                byte[] combinedBytes = dataList.ToArray();
+                _serial.Write(combinedBytes, 0, 15);
+            }
+        }
+        
     }
 }
