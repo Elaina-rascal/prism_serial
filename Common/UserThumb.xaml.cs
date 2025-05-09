@@ -10,6 +10,8 @@ namespace WpfXInput
         {
             InitializeComponent();
             SizeChanged += OnSizeChange;
+            Back.Visibility = Visibility.Collapsed;
+            BackR.Visibility = Visibility.Visible;
         }
 
         private void OnSizeChange(object sender, SizeChangedEventArgs e)
@@ -65,6 +67,13 @@ namespace WpfXInput
             double newY = (ActualHeight / 2) * ((-Y + 35535.0) / 71070.0); // Y 反转映射到 [0, ActualHeight/2]
 
             Thumb.Margin = new Thickness(newX, newY, 0, 0);
+            Back.Margin = new Thickness(
+              ActualWidth / 4 - StrokeThickness,
+              ActualHeight / 4 - StrokeThickness,
+              ActualWidth / 4 - StrokeThickness,
+              ActualHeight / 4 - StrokeThickness
+          );
+           
         }
 
         // 保留PointSize属性以设置摇杆大小

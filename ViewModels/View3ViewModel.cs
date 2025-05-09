@@ -56,7 +56,7 @@ namespace prism_serial.ViewModels
                     // 读取控制器数据
                     ReadController();
                     // 等待一段时间再继续读取
-                    await Task.Delay(100); // 100ms 轮询间隔，避免过于频繁
+                    await Task.Delay(15); // 100ms 轮询间隔，避免过于频繁
                 }
                 
             }
