@@ -46,9 +46,19 @@ namespace prism_serial.ViewModels
             // 持续异步读取 Xbox 控制器状态
             while (true)
             {
-                await Task.Delay(100); // 100ms 轮询间隔，避免过于频繁
-
-                ReadController(); // 读取控制器数据
+                if (_controller==null || !_controller.IsConnected)
+                {
+                    _controller = new Controller(UserIndex.One);
+                    await Task.Delay(1000); // 1秒后重试
+                }
+                while (_controller != null && _controller.IsConnected)
+                {
+                    // 读取控制器数据
+                    ReadController();
+                    // 等待一段时间再继续读取
+                    await Task.Delay(100); // 100ms 轮询间隔，避免过于频繁
+                }
+                
             }
         }
 
