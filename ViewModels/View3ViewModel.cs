@@ -17,7 +17,7 @@ namespace prism_serial.ViewModels
         public View3ViewModel(SerialPort serialPortin)
         {
             _serial = serialPortin;
-            _controller = new Controller(UserIndex.One);
+            _controller = null;
             if (!_controller.IsConnected)
             {
                 Console.WriteLine("Xbox Controller not connected.");
@@ -62,15 +62,15 @@ namespace prism_serial.ViewModels
             }
         }
 
-        public View3Model.GamepadState _xboxData
+        public GamepadState _xboxData
         {
             get => _obj.XboxData; set {SetProperty(ref _obj.XboxData,value); RaisePropertyChanged(); }
         }
-        public View3Model.carState _carData
+        public carState _carData
         {
             get => _obj.carData; set { SetProperty(ref _obj.carData, value); RaisePropertyChanged(); }
         }
-        public View3Model.ControlMode_t ControlMode
+        public ControlMode_t ControlMode
         {
             get => _obj.ControlMode; set { _obj.ControlMode=value; RaisePropertyChanged(); }
         }
