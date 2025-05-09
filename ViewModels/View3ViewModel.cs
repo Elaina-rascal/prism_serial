@@ -31,16 +31,16 @@ namespace prism_serial.ViewModels
         }
         SerialPort _serial ;
         private View3Model _obj = new View3Model();
-        public bool IsAPressed
-        {
-            get => _obj.IsAPressed; set {
-                if (_obj.IsAPressed != value)
-                {
-                    _obj.IsAPressed = value;
-                    RaisePropertyChanged();
-                }
-            }
-        }
+        //public bool IsAPressed
+        //{
+        //    get => _obj.IsAPressed; set {
+        //        if (_obj.IsAPressed != value)
+        //        {
+        //            _obj.IsAPressed = value;
+        //            RaisePropertyChanged();
+        //        }
+        //    }
+        //}
         private async void StartReadingController()
         {
             // 持续异步读取 Xbox 控制器状态
@@ -66,9 +66,42 @@ namespace prism_serial.ViewModels
         {
             get => _obj.XboxData; set {SetProperty(ref _obj.XboxData,value); RaisePropertyChanged(); }
         }
-        private Timer _timer;
+        public View3Model.carState _carData
+        {
+            get => _obj.carData; set { SetProperty(ref _obj.carData, value); RaisePropertyChanged(); }
+        }
+        public View3Model.ControlMode_t ControlMode
+        {
+            get => _obj.ControlMode; set { _obj.ControlMode=value; RaisePropertyChanged(); }
+        }
+        public List<string> TextListControl
+        {
+            get => _obj.TextListControl;
+            set => _obj.TextListControl = value;
+        }
+        public string TextListSelected
+        {
+            get => _obj.TextListSelected;
+            set
+            {
+                _obj.TextListSelected = value;
+                if (value == "车身速度")
+                {
+                    ControlMode = View3Model.ControlMode_t.SpeedControlSelf;
+                }
+                else if (value == "大地速度")
+                {
+                    ControlMode = View3Model.ControlMode_t.SpeedControlGround;
+                }
+                else if (value == "位置闭环")
+                {
+                    ControlMode = View3Model.ControlMode_t.LocationControl;
+                }
+            }
+        }
+        //private Timer _timer;
         private Controller _controller;
-        private GamepadState _state = new GamepadState();
+        //private GamepadState _state = new GamepadState();
         public short _deadZone = 500; // 死区值
         private void ReadController()
         {
