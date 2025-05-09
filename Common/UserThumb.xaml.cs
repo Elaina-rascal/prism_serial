@@ -1,125 +1,96 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace WpfXInput
 {
-    /// <summary>
-    /// UserThumb.xaml 的交互逻辑
-    /// </summary>
     public partial class UserThumb : UserControl
     {
-        private Point TP;
-        private double ST, PZ;
-        private BackStyle BS;
-
         public UserThumb()
         {
             InitializeComponent();
-            TP = new Point(0, 0);
-            SizeChanged += new SizeChangedEventHandler(OnSizeChange);
+            SizeChanged += OnSizeChange;
+            Back.Visibility = Visibility.Collapsed;
+            BackR.Visibility = Visibility.Visible;
         }
 
         private void OnSizeChange(object sender, SizeChangedEventArgs e)
         {
-            Back.Margin = new Thickness(
-                ActualWidth / 4 - StrokeThickness,
-                ActualHeight / 4 - StrokeThickness,
-                ActualWidth / 4 - StrokeThickness,
-                ActualHeight / 4 - StrokeThickness
-            );
+            // 保证摇杆大小变化时位置也刷新
             Thumb.Width = ActualWidth / 2;
             Thumb.Height = ActualHeight / 2;
-            //point.Width = ActualWidth / 50;
-            //point.Height = ActualHeight / 50;
+            UpdateThumbPosition();
         }
 
-        public enum BackStyle
+        // 注册 DependencyProperty：X
+        public static readonly DependencyProperty XProperty =
+            DependencyProperty.Register(
+                nameof(X),
+                typeof(short),
+                typeof(UserThumb),
+                new PropertyMetadata((short)0, OnThumbChanged));
+
+        public short X
         {
-            Hidden = 0,
-            Rectangle = 1,
-            Ellipse = 2
+            get => (short)GetValue(XProperty);
+            set => SetValue(XProperty, value);
         }
 
-        public double StrokeThickness
+        // 注册 DependencyProperty：Y
+        public static readonly DependencyProperty YProperty =
+            DependencyProperty.Register(
+                nameof(Y),
+                typeof(short),
+                typeof(UserThumb),
+                new PropertyMetadata((short)0, OnThumbChanged));
+
+        public short Y
         {
-            get { return ST; }
-            set
+            get => (short)GetValue(YProperty);
+            set => SetValue(YProperty, value);
+        }
+
+        private static void OnThumbChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            if (d is UserThumb thumb)
             {
-                ST = value;
-                Back.StrokeThickness = value;
+                thumb.UpdateThumbPosition();
             }
         }
 
+        private void UpdateThumbPosition()
+        {
+            if (ActualWidth == 0 || ActualHeight == 0) return;
+
+            // 修正 X 和 Y 的映射，X 和 Y 不反转
+            double newX = (ActualWidth / 2) * ((X + 35535.0) / 71070.0); // X 映射到 [0, ActualWidth/2]
+            double newY = (ActualHeight / 2) * ((-Y + 35535.0) / 71070.0); // Y 反转映射到 [0, ActualHeight/2]
+
+            Thumb.Margin = new Thickness(newX, newY, 0, 0);
+            Back.Margin = new Thickness(
+              ActualWidth / 4 - StrokeThickness,
+              ActualHeight / 4 - StrokeThickness,
+              ActualWidth / 4 - StrokeThickness,
+              ActualHeight / 4 - StrokeThickness
+          );
+           
+        }
+
+        // 保留PointSize属性以设置摇杆大小
         public double PointSize
         {
-            get { return PZ; }
+            get => point.Width;
             set
             {
-                PZ = value;
                 point.Width = value;
                 point.Height = value;
             }
         }
 
-        public bool ButtonDown
+        public double StrokeThickness
         {
-            set { down.Visibility = value ? Visibility.Visible : Visibility.Collapsed; }
-            get { return down.Visibility == Visibility.Visible; }
-        }
-
-        public BackStyle UseBackStyle
-        {
-            get { return BS; }
-            set
-            {
-                BS = value;
-                switch (value)
-                {
-                    case BackStyle.Hidden:
-                        Back.Visibility = Visibility.Collapsed;
-                        BackR.Visibility = Visibility.Collapsed;
-                        break;
-                    case BackStyle.Rectangle:
-                        Back.Visibility = Visibility.Visible;
-                        BackR.Visibility = Visibility.Collapsed;
-                        break;
-                    case BackStyle.Ellipse:
-                        Back.Visibility = Visibility.Collapsed;
-                        BackR.Visibility = Visibility.Visible;
-                        break;
-                    default:
-                        Back.Visibility = Visibility.Visible;
-                        BackR.Visibility = Visibility.Collapsed;
-                        BS = BackStyle.Rectangle;
-                        break;
-                }
-            }
-        }
-
-        public Point ThumbPoint
-        {
-            get { return TP; }
-            set
-            {
-                TP = value;
-                Thumb.Margin = new Thickness(
-                    (ActualWidth / 4) * (value.X / 100 + 1),
-                    (ActualHeight / 4) * (value.Y / 100 + 1),
-                    0,
-                    0
-                );
-            }
+            get => Back.StrokeThickness;
+            set => Back.StrokeThickness = value;
         }
     }
 }

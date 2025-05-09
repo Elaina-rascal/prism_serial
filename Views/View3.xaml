@@ -58,14 +58,13 @@
             <Canvas Width="800" Height="600">
                 <Image Source="/Images/xbox.png" Width="800" Height="600" Stretch="Fill"></Image>
                 <Grid x:Name="ButtonA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="64" Height="64" Canvas.Left="544" Canvas.Top="252">
-           
                     <Ellipse x:Name="ButtonA_Back">
                         <Ellipse.Style>
                             <Style TargetType="Ellipse">
                                 <Setter Property="Fill" Value="{DynamicResource Brush_UP}" />
                           
                                 <Style.Triggers>
-                                    <DataTrigger Binding="{Binding IsAPressed}" Value="True">
+                                    <DataTrigger Binding="{Binding _xboxData.IsAPressed}" Value="True">
                                         <Setter Property="Fill" Value="{DynamicResource Brush_Down}" />
                                     </DataTrigger>
                                 </Style.Triggers>
@@ -80,9 +79,22 @@
                     </Ellipse>
                     <Label Content="A" FontFamily="Consolas" FontWeight="Bold" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0"/>
                 </Grid>
+                
                 <Grid x:Name="ButtonB" HorizontalAlignment="Left" VerticalAlignment="Center" Width="64" Height="64" Canvas.Left="588" Canvas.Top="204">
-                    <Ellipse Fill="{DynamicResource Brush_UP}"/>
-                    <Ellipse x:Name="ButtonB_Back" StrokeThickness="4" Stroke="Black">
+                    <Ellipse x:Name="ButtonB_Back">
+                        <Ellipse.Style>
+                            <Style TargetType="Ellipse">
+                                <Setter Property="Fill" Value="{DynamicResource Brush_UP}" />
+
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding _xboxData.IsBPressed}" Value="True">
+                                        <Setter Property="Fill" Value="{DynamicResource Brush_Down}" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Ellipse.Style>
+                    </Ellipse>
+                    <Ellipse StrokeThickness="4" Stroke="Black">
                         <Ellipse.Fill>
                             <SolidColorBrush Color="#FFD40000" Opacity="0.6"/>
                         </Ellipse.Fill>
@@ -90,8 +102,20 @@
                     <Label Content="B" FontFamily="Consolas" FontWeight="Bold" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0"/>
                 </Grid>
                 <Grid x:Name="ButtonX" HorizontalAlignment="Left" VerticalAlignment="Center" Width="64" Height="64" Canvas.Left="496" Canvas.Top="204">
-                    <Ellipse Fill="{DynamicResource Brush_UP}"/>
-                    <Ellipse x:Name="ButtonX_Back" StrokeThickness="4" Stroke="Black">
+                    <Ellipse >
+                        <Ellipse.Style>
+                            <Style TargetType="Ellipse">
+                                <Setter Property="Fill" Value="{DynamicResource Brush_UP}" />
+
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding _xboxData.IsXPressed}" Value="True">
+                                        <Setter Property="Fill" Value="{DynamicResource Brush_Down}" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Ellipse.Style>
+                    </Ellipse>
+                    <Ellipse StrokeThickness="4" Stroke="Black">
                         <Ellipse.Fill>
                             <SolidColorBrush Color="#FF0087D4" Opacity="0.6"/>
                         </Ellipse.Fill>
@@ -99,8 +123,20 @@
                     <Label Content="X" FontFamily="Consolas" FontWeight="Bold" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0"/>
                 </Grid>
                 <Grid x:Name="ButtonY" HorizontalAlignment="Center" VerticalAlignment="Top" Width="64" Height="64" Canvas.Left="543" Canvas.Top="158">
-                    <Ellipse Fill="{DynamicResource Brush_UP}"/>
-                    <Ellipse x:Name="ButtonY_Back" StrokeThickness="4" Stroke="Black">
+                    <Ellipse >
+                        <Ellipse.Style>
+                            <Style TargetType="Ellipse">
+                                <Setter Property="Fill" Value="{DynamicResource Brush_UP}" />
+
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding _xboxData.IsYPressed}" Value="True">
+                                        <Setter Property="Fill" Value="{DynamicResource Brush_Down}" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Ellipse.Style>
+                    </Ellipse>
+                    <Ellipse  StrokeThickness="4" Stroke="Black">
                         <Ellipse.Fill>
                             <SolidColorBrush Color="#FFD4C100" Opacity="0.6"/>
                         </Ellipse.Fill>
@@ -259,8 +295,8 @@
                     <Label Content="RT" FontFamily="Consolas" FontWeight="Bold" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0"/>
                 </Grid>
 
-                <xbox:UserThumb x:Name="pointl" Height="250" Width="250" StrokeThickness="4" PointSize="65" UseBackStyle="Ellipse" Canvas.Left="107" Canvas.Top="111"/>
-                <xbox:UserThumb x:Name="pointr" Height="250" Width="250" StrokeThickness="4" PointSize="65" UseBackStyle="Ellipse" Canvas.Left="364" Canvas.Top="211"/>
+                <xbox:UserThumb x:Name="pointl"  X="{Binding _xboxData.LeftThumbX}" Y="{Binding _xboxData.LeftThumbY}" Height="250" Width="250" StrokeThickness="4" PointSize="65"  Canvas.Left="107" Canvas.Top="112" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <xbox:UserThumb x:Name="pointr" X="{Binding _xboxData.RightThumbX}" Y="{Binding _xboxData.RightThumbY}" Height="250" Width="250" StrokeThickness="4" PointSize="65"  Canvas.Left="364" Canvas.Top="211"/>
             </Canvas>
         </Viewbox>
     </Grid>
