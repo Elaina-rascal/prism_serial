@@ -295,8 +295,8 @@
                     <Label Content="RT" FontFamily="Consolas" FontWeight="Bold" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0"/>
                 </Grid>
 
-                <xbox:UserThumb x:Name="pointl" Height="250" Width="250" StrokeThickness="4" PointSize="65" UseBackStyle="Ellipse" Canvas.Left="107" Canvas.Top="111"/>
-                <xbox:UserThumb x:Name="pointr" Height="250" Width="250" StrokeThickness="4" PointSize="65" UseBackStyle="Ellipse" Canvas.Left="364" Canvas.Top="211"/>
+                <xbox:UserThumb x:Name="pointl"  X="{Binding _xboxData.LeftThumbX}" Y="{Binding _xboxData.LeftThumbY}" Height="250" Width="250" StrokeThickness="4" PointSize="65"  Canvas.Left="107" Canvas.Top="111"/>
+                <xbox:UserThumb x:Name="pointr" Height="250" Width="250" StrokeThickness="4" PointSize="65"  Canvas.Left="364" Canvas.Top="211"/>
             </Canvas>
         </Viewbox>
     </Grid>
