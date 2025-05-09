@@ -19,6 +19,11 @@ namespace prism_serial.Model
             public short RightThumbY { get; set; }
             public byte LeftTrigger { get; set; }
             public byte RightTrigger { get; set; }
+            public bool IsAPressed { get; set; }
+            public bool IsBPressed { get; set; }
+            public bool IsXPressed { get; set; }
+            public bool IsYPressed { get; set; }
+
         }
     }
 }

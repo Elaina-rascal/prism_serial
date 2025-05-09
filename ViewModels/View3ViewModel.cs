@@ -53,7 +53,7 @@ namespace prism_serial.ViewModels
 
         public View3Model.GamepadState _xboxData
         {
-            get => _obj.XboxData; set { _obj.XboxData = value; RaisePropertyChanged(); }
+            get => _obj.XboxData; set {SetProperty(ref _obj.XboxData,value); RaisePropertyChanged(); }
         }
         private Timer _timer;
         private Controller _controller;
@@ -70,6 +70,11 @@ namespace prism_serial.ViewModels
                 RightThumbY = state.Gamepad.RightThumbY,
                 LeftTrigger = state.Gamepad.LeftTrigger,
                 RightTrigger = state.Gamepad.RightTrigger,
+                IsAPressed = (state.Gamepad.Buttons & GamepadButtonFlags.A) != 0,
+                IsBPressed = (state.Gamepad.Buttons & GamepadButtonFlags.B) != 0,
+                IsXPressed = (state.Gamepad.Buttons & GamepadButtonFlags.X) != 0,
+                IsYPressed = (state.Gamepad.Buttons & GamepadButtonFlags.Y) != 0
+
             };
             IsAPressed = (state.Gamepad.Buttons & GamepadButtonFlags.A) != 0;
             Console.WriteLine($"LX: {_xboxData.LeftThumbX}, LY: {_xboxData.LeftThumbY}, RX: {_xboxData.RightThumbX}, RY: {_xboxData.RightThumbY}, LT: {_xboxData.LeftTrigger}, RT: {_xboxData.RightTrigger}");
