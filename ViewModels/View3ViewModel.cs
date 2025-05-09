@@ -5,6 +5,7 @@ using SharpDX.XInput;
 using System;
 using System.Collections.ObjectModel;
 using System.IO.Ports;
+using System.Threading.Tasks;
 using System.Timers;
 using static prism_serial.Model.View3Model;
 //using v
@@ -22,12 +23,34 @@ namespace prism_serial.ViewModels
                 return;
             }
 
-            _timer = new Timer(100); // 10 Hz
-            _timer.Elapsed += (s, e) => ReadController();
-            _timer.Start();
+            //_timer = new Timer(100); // 10 Hz
+            //_timer.Elapsed += (s, e) => ReadController();
+            //_timer.Start();
+            StartReadingController();
         }
         SerialPort _serial ;
         private View3Model _obj = new View3Model();
+        public bool IsAPressed
+        {
+            get => _obj.IsAPressed; set {
+                if (_obj.IsAPressed != value)
+                {
+                    _obj.IsAPressed = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+        private async void StartReadingController()
+        {
+            // 持续异步读取 Xbox 控制器状态
+            while (true)
+            {
+                await Task.Delay(100); // 100ms 轮询间隔，避免过于频繁
+
+                ReadController(); // 读取控制器数据
+            }
+        }
+
         public View3Model.GamepadState _xboxData
         {
             get => _obj.XboxData; set { _obj.XboxData = value; RaisePropertyChanged(); }
@@ -38,6 +61,7 @@ namespace prism_serial.ViewModels
         private void ReadController()
         {
             var state = _controller.GetState();
+            
             _xboxData = new GamepadState
             {
                 LeftThumbX = state.Gamepad.LeftThumbX,
@@ -47,6 +71,7 @@ namespace prism_serial.ViewModels
                 LeftTrigger = state.Gamepad.LeftTrigger,
                 RightTrigger = state.Gamepad.RightTrigger,
             };
+            IsAPressed = (state.Gamepad.Buttons & GamepadButtonFlags.A) != 0;
             Console.WriteLine($"LX: {_xboxData.LeftThumbX}, LY: {_xboxData.LeftThumbY}, RX: {_xboxData.RightThumbX}, RY: {_xboxData.RightThumbY}, LT: {_xboxData.LeftTrigger}, RT: {_xboxData.RightTrigger}");
         }
     }

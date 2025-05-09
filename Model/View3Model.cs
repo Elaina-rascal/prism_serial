@@ -9,6 +9,7 @@ namespace prism_serial.Model
         {
             
         }
+        public bool IsAPressed { get; set; }
         public GamepadState XboxData = new GamepadState();
         public class GamepadState
         {

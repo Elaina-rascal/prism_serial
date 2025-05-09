@@ -58,10 +58,24 @@
             <Canvas Width="800" Height="600">
                 <Image Source="/Images/xbox.png" Width="800" Height="600" Stretch="Fill"></Image>
                 <Grid x:Name="ButtonA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="64" Height="64" Canvas.Left="544" Canvas.Top="252">
-                    <Ellipse Fill="{DynamicResource Brush_UP}"/>
-                    <Ellipse x:Name="ButtonA_Back" StrokeThickness="4" Stroke="Black">
+           
+                    <Ellipse x:Name="ButtonA_Back">
+                        <Ellipse.Style>
+                            <Style TargetType="Ellipse">
+                                <Setter Property="Fill" Value="{DynamicResource Brush_UP}" />
+                          
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding IsAPressed}" Value="True">
+                                        <Setter Property="Fill" Value="{DynamicResource Brush_Down}" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Ellipse.Style>
+                    </Ellipse>
+                    <Ellipse StrokeThickness="4" Stroke="Black">
                         <Ellipse.Fill>
                             <SolidColorBrush Color="#FF00D430" Opacity="0.6"/>
+                            <!-- 静态颜色 -->
                         </Ellipse.Fill>
                     </Ellipse>
                     <Label Content="A" FontFamily="Consolas" FontWeight="Bold" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0"/>
