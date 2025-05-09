@@ -7,21 +7,17 @@ namespace prism_serial.Model
     {
         public View3Model()
         {
-            //Plot = new PlotModel();
-            //SerialCollection = new ObservableCollection<float>();
-            //SerialCollection = new ObservableCollection<LineSeries>();
-            //SerialCollection.Add(new LineSeries() { Title = "线1" });
-            //SerialCollection.Add(new LineSeries() { Title = "线2" });
-            //SerialCollection.Add(new LineSeries() { Title = "线3" });
-            //foreach (var series in SerialCollection)
-            //{
-                //Plot.Series.Add(series);
-            //}
+            
         }
-
-        //public PlotModel Plot { get; set; }
-
-        ////public ObservableCollection<float> SerialCollection { get; set; }
-        //public ObservableCollection<LineSeries> SerialCollection { get; set; }
+        public GamepadState XboxData = new GamepadState();
+        public class GamepadState
+        {
+            public short LeftThumbX { get; set; }
+            public short LeftThumbY { get; set; }
+            public short RightThumbX { get; set; }
+            public short RightThumbY { get; set; }
+            public byte LeftTrigger { get; set; }
+            public byte RightTrigger { get; set; }
+        }
     }
 }
