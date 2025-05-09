@@ -3,6 +3,7 @@ using Prism.Mvvm;
 using prism_serial.Model;
 using SharpDX.XInput;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO.Ports;
 using System.Threading.Tasks;
@@ -58,6 +59,7 @@ namespace prism_serial.ViewModels
         private Timer _timer;
         private Controller _controller;
         private GamepadState _state = new GamepadState();
+        public short _deadZone = 8000; // 死区值
         private void ReadController()
         {
             var state = _controller.GetState();
@@ -76,8 +78,58 @@ namespace prism_serial.ViewModels
                 IsYPressed = (state.Gamepad.Buttons & GamepadButtonFlags.Y) != 0
 
             };
-            IsAPressed = (state.Gamepad.Buttons & GamepadButtonFlags.A) != 0;
+            //IsAPressed = (state.Gamepad.Buttons & GamepadButtonFlags.A) != 0;
+            xboxSendToSerial();
             Console.WriteLine($"LX: {_xboxData.LeftThumbX}, LY: {_xboxData.LeftThumbY}, RX: {_xboxData.RightThumbX}, RY: {_xboxData.RightThumbY}, LT: {_xboxData.LeftTrigger}, RT: {_xboxData.RightTrigger}");
+        }
+        //对原始数据进行处理
+        private int xboxDataHandle(short data)
+        {
+            //过滤死区并映射到-100到100
+            if (data > _deadZone)
+            {
+                return (int)((data - _deadZone) * 100 / (32767 - _deadZone));
+            }
+            else if (data < -_deadZone)
+            {
+                return (int)((data + _deadZone) * 100 / (32767 - _deadZone));
+            }
+            else
+            {
+                return 0;
+            }
+        }
+        private void xboxSendToSerial()
+        {
+            if (_serial.IsOpen)
+            {
+                try
+                {
+                    var thumbx = (short)xboxDataHandle(_xboxData.LeftThumbX);
+                    var thumby = (short)xboxDataHandle(_xboxData.LeftThumbY);
+                    //通过串口发送数据帧头为0xED
+                    //byte[] data = new byte[9];
+
+
+                    byte[] xBytes = BitConverter.GetBytes(thumbx);
+                    byte[] yBytes = BitConverter.GetBytes(thumby);
+
+                    // 使用 List<byte> 动态拼接数组
+                    List<byte> dataList = new List<byte>();
+                    dataList.Add(0xED); // 添加帧头
+                    dataList.AddRange(xBytes); // 添加 xBytes
+                    dataList.AddRange(yBytes); // 添加 yBytes
+                                                  
+                    // 将 List<byte> 转换为 byte[]
+                    byte[] data = dataList.ToArray();
+                    _serial.Write(data, 0, data.Length);
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error sending data to serial port: {ex.Message}");
+                }
+            }
         }
     }
 }
