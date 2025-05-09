@@ -59,7 +59,7 @@ namespace prism_serial.ViewModels
         private Timer _timer;
         private Controller _controller;
         private GamepadState _state = new GamepadState();
-        public short _deadZone = 8000; // 死区值
+        public short _deadZone = 500; // 死区值
         private void ReadController()
         {
             var state = _controller.GetState();
@@ -86,16 +86,25 @@ namespace prism_serial.ViewModels
         private int xboxDataHandle(short data)
         {
             //过滤死区并映射到-100到100
-            if (data > _deadZone)
+            int deadZone = _deadZone;
+            int maxValue = 32767;
+            int minValue = -32768;
+
+            if (data > deadZone)
             {
-                return (int)((data - _deadZone) * 100 / (32767 - _deadZone));
+                // 映射正数范围
+                double ratio = (double)(data - deadZone) / (maxValue - deadZone);
+                return (int)Math.Round(ratio * 100);
             }
-            else if (data < -_deadZone)
+            else if (data < -deadZone)
             {
-                return (int)((data + _deadZone) * 100 / (32767 - _deadZone));
+                // 映射负数范围
+                double ratio = (double)(data + deadZone) / (minValue + deadZone);
+                return (int)Math.Round(ratio * -100);
             }
             else
             {
+                // 在死区范围内返回0
                 return 0;
             }
         }
